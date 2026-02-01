@@ -1654,6 +1654,50 @@
       closeSettings();
     }
     
+    async function testAndSave() {
+      const token = document.getElementById('github-token').value.trim();
+      const statusEl = document.getElementById('token-status');
+      
+      if (!token) {
+        statusEl.className = 'token-status invalid';
+        statusEl.textContent = '? Please paste your token above';
+        return;
+      }
+      
+      statusEl.className = 'token-status';
+      statusEl.textContent = '? Verifying...';
+      
+      try {
+        const resp = await fetch('https://api.github.com/repos/' + GITHUB_REPO, {
+          headers: {
+            'Authorization': 'token ' + token,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+        
+        if (resp.ok) {
+          const data = await resp.json();
+          if (data.permissions && data.permissions.push) {
+            // Save and close
+            saveSettingsToStorage({ token, lastSync: null });
+            statusEl.className = 'token-status valid';
+            statusEl.textContent = '? Connected! Closing...';
+            showToast('Sync enabled! Changes now save automatically.', 'success');
+            setTimeout(() => closeSettings(), 1000);
+          } else {
+            statusEl.className = 'token-status invalid';
+            statusEl.textContent = '? Token needs "repo" scope - create a new one';
+          }
+        } else {
+          statusEl.className = 'token-status invalid';
+          statusEl.textContent = '? Invalid token - try creating a new one';
+        }
+      } catch (e) {
+        statusEl.className = 'token-status invalid';
+        statusEl.textContent = '? Connection failed - check your internet';
+      }
+    }
+    
     async function testToken() {
       const token = document.getElementById('github-token').value.trim();
       const statusEl = document.getElementById('token-status');

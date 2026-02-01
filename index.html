@@ -1320,6 +1320,290 @@
     @keyframes fadeOut {
       to { opacity: 0; }
     }
+    
+    /* ========== EXPERT UX FEATURES ========== */
+    
+    /* Drag-and-drop for Work Plan items */
+    .work-plan-item.dragging {
+      opacity: 0.5;
+      background: var(--accent);
+      transform: scale(1.02);
+    }
+    
+    .work-plan-item.drag-over {
+      border-top: 3px solid var(--accent);
+      margin-top: -3px;
+    }
+    
+    .work-plan-item {
+      cursor: grab;
+    }
+    
+    .work-plan-item:active {
+      cursor: grabbing;
+    }
+    
+    .drag-handle {
+      color: var(--text-muted);
+      cursor: grab;
+      padding: 0 8px;
+      font-size: 14px;
+      user-select: none;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+    
+    .work-plan-item:hover .drag-handle {
+      opacity: 1;
+    }
+    
+    /* Quick-add button for sub-tasks */
+    .quick-add-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--surface-hover);
+      border: 1px dashed var(--border);
+      color: var(--text-muted);
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-left: 8px;
+    }
+    
+    .quick-add-btn:hover {
+      background: var(--accent);
+      border-style: solid;
+      border-color: var(--accent);
+      color: white;
+      transform: scale(1.1);
+    }
+    
+    /* Quick-add inline form */
+    .quick-add-form {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 8px;
+      animation: slideDown 0.2s ease;
+    }
+    
+    .quick-add-form.open {
+      display: block;
+    }
+    
+    .quick-add-form input {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      padding: 8px 10px;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    
+    .quick-add-form input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    
+    .quick-add-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    
+    .quick-add-row input[type="date"] {
+      flex: 1;
+    }
+    
+    .quick-add-actions {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      margin-top: 8px;
+    }
+    
+    .btn-cancel {
+      background: var(--surface-hover);
+      color: var(--text);
+    }
+    
+    /* Timeline sub-task markers */
+    .timeline-subtask-marker {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      cursor: pointer;
+      transition: all 0.2s;
+      z-index: 5;
+    }
+    
+    .timeline-subtask-marker:hover {
+      transform: translateX(-50%) scale(1.5);
+      z-index: 15;
+    }
+    
+    .timeline-subtask-marker.complete {
+      background: var(--success);
+    }
+    
+    .timeline-subtask-marker.pending {
+      background: var(--text-muted);
+    }
+    
+    .timeline-subtask-marker.in-progress {
+      background: var(--warning);
+    }
+    
+    .timeline-subtask-marker.overdue {
+      background: var(--danger);
+      animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+      50% { box-shadow: 0 0 0 4px rgba(239, 68, 68, 0); }
+    }
+    
+    .timeline-subtask-tooltip {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      white-space: nowrap;
+      z-index: 100;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    .timeline-subtask-marker:hover .timeline-subtask-tooltip {
+      display: block;
+    }
+    
+    /* "At Risk" warning badge */
+    .at-risk-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--warning);
+      color: #000;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-left: 8px;
+      animation: attention 2s infinite;
+    }
+    
+    @keyframes attention {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    /* Time remaining calculation in Work Plan */
+    .time-remaining {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: var(--bg);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
+    
+    .time-remaining.healthy {
+      border-left: 3px solid var(--success);
+      color: var(--success);
+    }
+    
+    .time-remaining.warning {
+      border-left: 3px solid var(--warning);
+      color: var(--warning);
+    }
+    
+    .time-remaining.danger {
+      border-left: 3px solid var(--danger);
+      color: var(--danger);
+      font-weight: 600;
+    }
+    
+    .time-remaining-icon {
+      font-size: 16px;
+    }
+    
+    /* Quick-add modal */
+    .quick-add-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 150;
+    }
+    
+    .quick-add-modal.open {
+      display: flex;
+    }
+    
+    .quick-add-modal-content {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 24px;
+      width: 90%;
+      max-width: 400px;
+      animation: slideDown 0.2s ease;
+    }
+    
+    .quick-add-modal h3 {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .quick-add-field {
+      margin-bottom: 12px;
+    }
+    
+    .quick-add-field label {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    
+    .quick-add-field input {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      padding: 10px;
+      font-size: 14px;
+    }
+    
+    .quick-add-field input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
   </style>
 </head>
 <body>
@@ -1435,6 +1719,34 @@
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close">&times;</button>
     <img id="lightbox-img" src="" alt="Attachment">
+  </div>
+
+  <!-- Quick-add sub-task modal -->
+  <div class="quick-add-modal" id="quick-add-modal">
+    <div class="quick-add-modal-content">
+      <h3>➕ Add Sub-task</h3>
+      <div class="quick-add-field">
+        <label>Parent Deliverable</label>
+        <input type="text" id="quick-add-parent-name" readonly style="opacity: 0.7;">
+        <input type="hidden" id="quick-add-parent-id">
+      </div>
+      <div class="quick-add-field">
+        <label>Sub-task Title *</label>
+        <input type="text" id="quick-add-title" placeholder="e.g., Draft initial outline">
+      </div>
+      <div class="quick-add-field">
+        <label>Due Date</label>
+        <input type="date" id="quick-add-due">
+      </div>
+      <div class="quick-add-field">
+        <label>Notes (optional)</label>
+        <input type="text" id="quick-add-notes" placeholder="Brief description...">
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" onclick="submitQuickAdd()">Add Sub-task</button>
+        <button class="btn btn-cancel" onclick="closeQuickAdd()">Cancel</button>
+      </div>
+    </div>
   </div>
 
   <div class="modal-overlay" id="modal">
@@ -1787,6 +2099,27 @@
         // Merge localData into userData
         currentContent.userData = localData;
         
+        // Add new subtasks to tasks array
+        if (localData._newSubtasks && localData._newSubtasks.length > 0) {
+          localData._newSubtasks.forEach(newSubtask => {
+            // Check if already exists
+            const exists = currentContent.tasks.find(t => t.id === newSubtask.id);
+            if (!exists) {
+              currentContent.tasks.push(newSubtask);
+            }
+          });
+        }
+        
+        // Update subtask orders in parent tasks
+        Object.keys(localData).forEach(taskId => {
+          if (localData[taskId].subtaskOrder) {
+            const parentTask = currentContent.tasks.find(t => t.id === taskId);
+            if (parentTask) {
+              parentTask.subtasks = localData[taskId].subtaskOrder;
+            }
+          }
+        });
+        
         // Encode new content
         const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(currentContent, null, 2))));
         
@@ -1943,6 +2276,57 @@
       
       document.getElementById('timeline-progress').style.width = progressPct + '%';
       document.getElementById('timeline-today').style.left = progressPct + '%';
+      
+      // Render sub-task markers on timeline
+      renderTimelineSubtaskMarkers(totalStart, totalEnd, totalDays, today);
+    }
+    
+    function renderTimelineSubtaskMarkers(totalStart, totalEnd, totalDays, today) {
+      // Remove existing markers
+      document.querySelectorAll('.timeline-subtask-marker').forEach(el => el.remove());
+      
+      const trackEl = document.querySelector('.timeline-track');
+      if (!trackEl) return;
+      
+      // Get all subtasks with due dates
+      const subtasks = data.tasks.filter(t => t.parent && t.dueDate);
+      
+      subtasks.forEach(st => {
+        const dueDate = new Date(st.dueDate + 'T00:00:00');
+        
+        // Only show if within timeline range
+        if (dueDate < totalStart || dueDate > totalEnd) return;
+        
+        const dayOffset = (dueDate - totalStart) / (1000 * 60 * 60 * 24);
+        const leftPct = (dayOffset / totalDays) * 100;
+        
+        // Determine marker status
+        let statusClass = st.status;
+        if (st.status !== 'complete' && st.dueDate < today) {
+          statusClass = 'overdue';
+        }
+        
+        // Get parent task name
+        const parent = data.tasks.find(t => t.id === st.parent);
+        const parentName = parent ? parent.title : '';
+        
+        const marker = document.createElement('div');
+        marker.className = `timeline-subtask-marker ${statusClass}`;
+        marker.style.left = leftPct + '%';
+        marker.innerHTML = `
+          <div class="timeline-subtask-tooltip">
+            <strong>${escapeHtml(st.title)}</strong><br>
+            <span style="color: var(--text-muted);">↳ ${escapeHtml(parentName)}</span><br>
+            <span>${formatDate(st.dueDate)}</span>
+          </div>
+        `;
+        marker.onclick = (e) => {
+          e.stopPropagation();
+          if (parent) openTask(parent.id);
+        };
+        
+        trackEl.appendChild(marker);
+      });
     }
     
     function filterTasks(tasks) {
@@ -1970,7 +2354,18 @@
     function getSubtaskProgress(task) {
       if (!task.subtasks || task.subtasks.length === 0) return null;
       
-      const subtasks = task.subtasks.map(id => data.tasks.find(t => t.id === id)).filter(Boolean);
+      // Check if there's a custom order saved in localStorage
+      const taskLocal = localData[task.id];
+      let subtaskIds = task.subtasks;
+      
+      if (taskLocal && taskLocal.subtaskOrder && taskLocal.subtaskOrder.length > 0) {
+        // Use saved order, but include any new subtasks not in the order
+        const savedOrder = taskLocal.subtaskOrder;
+        const newIds = task.subtasks.filter(id => !savedOrder.includes(id));
+        subtaskIds = [...savedOrder.filter(id => task.subtasks.includes(id)), ...newIds];
+      }
+      
+      const subtasks = subtaskIds.map(id => data.tasks.find(t => t.id === id)).filter(Boolean);
       const completed = subtasks.filter(st => st.status === 'complete').length;
       const total = subtasks.length;
       
@@ -2060,6 +2455,20 @@
       render();
     }
     
+    function isAtRisk(task) {
+      // Calculate if deliverable is at risk:
+      // If (incomplete sub-tasks > days remaining), it's at risk
+      const progress = getSubtaskProgress(task);
+      if (!progress || !task.dueDate) return false;
+      
+      const today = getToday();
+      const daysRemaining = daysBetween(today, task.dueDate);
+      const incompleteTasks = progress.total - progress.completed;
+      
+      // At risk if more incomplete tasks than days remaining (and not complete)
+      return task.status !== 'complete' && daysRemaining >= 0 && incompleteTasks > daysRemaining;
+    }
+    
     function renderTasks() {
       const groupsEl = document.getElementById('task-groups');
       const today = getToday();
@@ -2085,6 +2494,8 @@
                 const subName = getSubcategoryName(task.category, task.subcategory);
                 const progress = getSubtaskProgress(task);
                 const isBlocked = hasOverdueSubtask(task);
+                const atRisk = isAtRisk(task);
+                const canAddSubtask = task.type === 'deliverable';
                 
                 return `
                   <div class="task-card ${task.status} ${isOverdue ? 'overdue' : ''}" 
@@ -2096,10 +2507,12 @@
                       </span>
                       ${subName ? `<span class="task-subcategory">${subName}</span>` : ''}
                       ${isBlocked ? '<span class="blocked-badge">⚠ Blocked</span>' : ''}
+                      ${atRisk && !isBlocked ? '<span class="at-risk-badge">⚠ At Risk</span>' : ''}
                     </div>
                     <div class="task-header deliverable-header">
                       <div class="deliverable-info">
                         <span class="task-title">${task.title}</span>
+                        ${canAddSubtask ? `<button class="quick-add-btn" onclick="event.stopPropagation(); openQuickAdd('${task.id}')" title="Add sub-task">+</button>` : ''}
                       </div>
                       <div style="display: flex; align-items: center; gap: 8px;">
                         ${progress ? renderProgressRing(progress.completed, progress.total) : ''}
@@ -2296,13 +2709,21 @@
       
       const today = getToday();
       
-      list.innerHTML = progress.subtasks.map(st => {
+      // Calculate time remaining info
+      const timeRemainingHtml = renderTimeRemaining(task, progress, today);
+      
+      // Build sortable list with drag handles
+      const itemsHtml = progress.subtasks.map((st, idx) => {
         const isOverdue = st.status !== 'complete' && st.dueDate && st.dueDate < today;
         const daysLeft = st.dueDate ? daysBetween(today, st.dueDate) : null;
         
         return `
           <div class="work-plan-item ${st.status} ${isOverdue ? 'overdue' : ''}" 
+               draggable="true"
+               data-subtask-id="${st.id}"
+               data-subtask-index="${idx}"
                onclick="toggleWorkPlanItem('${st.id}')">
+            <div class="drag-handle" title="Drag to reorder">⋮⋮</div>
             <div class="work-plan-checkbox"></div>
             <div class="work-plan-content">
               <div class="work-plan-item-title">${escapeHtml(st.title)}</div>
@@ -2315,6 +2736,150 @@
           </div>
         `;
       }).join('');
+      
+      list.innerHTML = timeRemainingHtml + itemsHtml;
+      
+      // Initialize drag-and-drop
+      initWorkPlanDragDrop(task.id);
+    }
+    
+    function renderTimeRemaining(task, progress, today) {
+      if (!task.dueDate) return '';
+      
+      const daysRemaining = daysBetween(today, task.dueDate);
+      const incompleteTasks = progress.total - progress.completed;
+      
+      // Already complete
+      if (task.status === 'complete' || incompleteTasks === 0) {
+        return `
+          <div class="time-remaining healthy">
+            <span class="time-remaining-icon">✅</span>
+            <span>All sub-tasks complete!</span>
+          </div>
+        `;
+      }
+      
+      // Past due
+      if (daysRemaining < 0) {
+        return `
+          <div class="time-remaining danger">
+            <span class="time-remaining-icon">🚨</span>
+            <span>Overdue by ${Math.abs(daysRemaining)} day${Math.abs(daysRemaining) !== 1 ? 's' : ''} with ${incompleteTasks} task${incompleteTasks !== 1 ? 's' : ''} remaining</span>
+          </div>
+        `;
+      }
+      
+      // Due today
+      if (daysRemaining === 0) {
+        return `
+          <div class="time-remaining danger">
+            <span class="time-remaining-icon">⏰</span>
+            <span>Due TODAY with ${incompleteTasks} task${incompleteTasks !== 1 ? 's' : ''} remaining!</span>
+          </div>
+        `;
+      }
+      
+      // At risk (more tasks than days)
+      if (incompleteTasks > daysRemaining) {
+        return `
+          <div class="time-remaining danger">
+            <span class="time-remaining-icon">⚠️</span>
+            <span>${daysRemaining} day${daysRemaining !== 1 ? 's' : ''} to complete ${incompleteTasks} remaining task${incompleteTasks !== 1 ? 's' : ''} — at risk!</span>
+          </div>
+        `;
+      }
+      
+      // Warning (tasks equals days)
+      if (incompleteTasks === daysRemaining) {
+        return `
+          <div class="time-remaining warning">
+            <span class="time-remaining-icon">⚡</span>
+            <span>${daysRemaining} day${daysRemaining !== 1 ? 's' : ''} to complete ${incompleteTasks} remaining task${incompleteTasks !== 1 ? 's' : ''} — tight schedule</span>
+          </div>
+        `;
+      }
+      
+      // Healthy
+      return `
+        <div class="time-remaining healthy">
+          <span class="time-remaining-icon">📅</span>
+          <span>${daysRemaining} day${daysRemaining !== 1 ? 's' : ''} to complete ${incompleteTasks} remaining task${incompleteTasks !== 1 ? 's' : ''}</span>
+        </div>
+      `;
+    }
+    
+    function initWorkPlanDragDrop(parentTaskId) {
+      const items = document.querySelectorAll('.work-plan-item[draggable="true"]');
+      let draggedItem = null;
+      
+      items.forEach(item => {
+        item.addEventListener('dragstart', (e) => {
+          draggedItem = item;
+          item.classList.add('dragging');
+          e.dataTransfer.effectAllowed = 'move';
+          e.dataTransfer.setData('text/plain', item.dataset.subtaskId);
+        });
+        
+        item.addEventListener('dragend', () => {
+          item.classList.remove('dragging');
+          items.forEach(i => i.classList.remove('drag-over'));
+          draggedItem = null;
+        });
+        
+        item.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = 'move';
+          
+          if (draggedItem && draggedItem !== item) {
+            item.classList.add('drag-over');
+          }
+        });
+        
+        item.addEventListener('dragleave', () => {
+          item.classList.remove('drag-over');
+        });
+        
+        item.addEventListener('drop', (e) => {
+          e.preventDefault();
+          item.classList.remove('drag-over');
+          
+          if (draggedItem && draggedItem !== item) {
+            const fromId = draggedItem.dataset.subtaskId;
+            const toId = item.dataset.subtaskId;
+            reorderSubtasks(parentTaskId, fromId, toId);
+          }
+        });
+      });
+    }
+    
+    function reorderSubtasks(parentTaskId, fromId, toId) {
+      const parentTask = data.tasks.find(t => t.id === parentTaskId);
+      if (!parentTask || !parentTask.subtasks) return;
+      
+      const subtasks = [...parentTask.subtasks];
+      const fromIndex = subtasks.indexOf(fromId);
+      const toIndex = subtasks.indexOf(toId);
+      
+      if (fromIndex === -1 || toIndex === -1) return;
+      
+      // Remove from old position and insert at new position
+      subtasks.splice(fromIndex, 1);
+      subtasks.splice(toIndex, 0, fromId);
+      
+      // Update the parent task
+      parentTask.subtasks = subtasks;
+      
+      // Save the new order to localStorage
+      const taskLocal = getTaskLocalData(parentTaskId);
+      taskLocal.subtaskOrder = subtasks;
+      saveLocalData();
+      
+      // Re-render
+      renderWorkPlan(parentTask);
+      render();
+      
+      // Sync to GitHub
+      syncToGitHub(true);
     }
     
     function toggleWorkPlanItem(subtaskId) {
@@ -2607,6 +3172,124 @@
       render();
       openTask(selectedTask.id);
     }
+    
+    // ========== Quick-Add Sub-task Functions ==========
+    
+    function openQuickAdd(parentTaskId) {
+      const parentTask = data.tasks.find(t => t.id === parentTaskId);
+      if (!parentTask) return;
+      
+      document.getElementById('quick-add-parent-id').value = parentTaskId;
+      document.getElementById('quick-add-parent-name').value = parentTask.title;
+      document.getElementById('quick-add-title').value = '';
+      document.getElementById('quick-add-notes').value = '';
+      
+      // Set default due date to parent's due date minus 1 day, or today
+      if (parentTask.dueDate) {
+        const parentDue = new Date(parentTask.dueDate + 'T00:00:00');
+        parentDue.setDate(parentDue.getDate() - 1);
+        document.getElementById('quick-add-due').value = parentDue.toISOString().split('T')[0];
+      } else {
+        document.getElementById('quick-add-due').value = getToday();
+      }
+      
+      document.getElementById('quick-add-modal').classList.add('open');
+      document.getElementById('quick-add-title').focus();
+    }
+    
+    function closeQuickAdd() {
+      document.getElementById('quick-add-modal').classList.remove('open');
+    }
+    
+    function generateSubtaskId(parentTaskId) {
+      const parentTask = data.tasks.find(t => t.id === parentTaskId);
+      const existingSubtasks = data.tasks.filter(t => t.parent === parentTaskId);
+      
+      // Find the next available letter
+      const usedLetters = existingSubtasks.map(st => {
+        const match = st.id.match(/-([a-z])$/);
+        return match ? match[1] : '';
+      }).filter(Boolean);
+      
+      const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+      let nextLetter = 'a';
+      
+      for (let i = 0; i < alphabet.length; i++) {
+        if (!usedLetters.includes(alphabet[i])) {
+          nextLetter = alphabet[i];
+          break;
+        }
+      }
+      
+      return `${parentTaskId}-${nextLetter}`;
+    }
+    
+    function submitQuickAdd() {
+      const parentTaskId = document.getElementById('quick-add-parent-id').value;
+      const title = document.getElementById('quick-add-title').value.trim();
+      const dueDate = document.getElementById('quick-add-due').value;
+      const notes = document.getElementById('quick-add-notes').value.trim();
+      
+      if (!title) {
+        alert('Please enter a title for the sub-task');
+        return;
+      }
+      
+      const parentTask = data.tasks.find(t => t.id === parentTaskId);
+      if (!parentTask) return;
+      
+      // Generate new subtask ID
+      const newId = generateSubtaskId(parentTaskId);
+      
+      // Create new subtask
+      const newSubtask = {
+        id: newId,
+        title: title,
+        phase: parentTask.phase,
+        type: 'subtask',
+        status: 'pending',
+        owner: parentTask.owner,
+        dueDate: dueDate || null,
+        dependencies: [],
+        category: parentTask.category,
+        subcategory: parentTask.subcategory,
+        parent: parentTaskId,
+        notes: notes || ''
+      };
+      
+      // Add to tasks array
+      data.tasks.push(newSubtask);
+      
+      // Add to parent's subtasks array
+      if (!parentTask.subtasks) parentTask.subtasks = [];
+      parentTask.subtasks.push(newId);
+      
+      // Save to localStorage as a new subtask record
+      const subtaskLocal = getTaskLocalData(newId);
+      subtaskLocal.notes = notes;
+      subtaskLocal.status = 'pending';
+      
+      // Also store the subtask data structure for sync
+      if (!localData._newSubtasks) localData._newSubtasks = [];
+      localData._newSubtasks.push(newSubtask);
+      
+      saveLocalData();
+      
+      // Close modal and re-render
+      closeQuickAdd();
+      render();
+      
+      // Show success toast
+      showToast(`Added sub-task: ${title}`, 'success');
+      
+      // Sync to GitHub
+      syncToGitHub(true);
+    }
+    
+    // Close quick-add modal on overlay click
+    document.getElementById('quick-add-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'quick-add-modal') closeQuickAdd();
+    });
     
     // Filter handlers
     document.querySelectorAll('.filter-btn').forEach(btn => {

@@ -11,13 +11,13 @@
       "id": "dallas-move",
       "name": "Dallas Move",
       "color": "#ec4899",
-      "icon": "ð "
+      "icon": "Ã°ÂÂÂ "
     },
     {
       "id": "special-strong",
       "name": "Special Strong",
       "color": "#3b82f6",
-      "icon": "ðª",
+      "icon": "Ã°ÂÂÂª",
       "subcategories": [
         {
           "id": "onboarding",
@@ -53,7 +53,7 @@
       "id": "avila",
       "name": "Avila University",
       "color": "#8b5cf6",
-      "icon": "ð",
+      "icon": "Ã°ÂÂÂ",
       "subcategories": [
         {
           "id": "spring-1",
@@ -136,7 +136,7 @@
       "dueDate": "2026-02-02",
       "dependencies": [],
       "category": "dallas-move",
-      "notes": "ð 1-800-639-8946 (1-800-WINDOWWORLD) | Window 1: S/N 126-4-21270, 48 7/8 x 17 1/4 | Window 2: S/N 126-4-20369, 35 3/4 x 53 1/2 | PO: B261 | Original install: 03/14/11",
+      "notes": "Ã°ÂÂÂ 1-800-639-8946 (1-800-WINDOWWORLD) | Window 1: S/N 126-4-21270, 48 7/8 x 17 1/4 | Window 2: S/N 126-4-20369, 35 3/4 x 53 1/2 | PO: B261 | Original install: 03/14/11",
       "attachments": [
         {
           "name": "Window 1 - S/N 126-4-21270",
@@ -771,7 +771,7 @@
     },
     {
       "id": "t17",
-      "title": "End-to-end tracking (ad â trial â enrollment)",
+      "title": "End-to-end tracking (ad Ã¢ÂÂ trial Ã¢ÂÂ enrollment)",
       "phase": "phase-2",
       "type": "deliverable",
       "status": "pending",
@@ -830,7 +830,7 @@
       ],
       "category": "special-strong",
       "subcategory": "funnel",
-      "notes": "Q3 Bonus Deliverable C.1 - Traffic â close with benchmarks"
+      "notes": "Q3 Bonus Deliverable C.1 - Traffic Ã¢ÂÂ close with benchmarks"
     },
     {
       "id": "t21",
@@ -940,7 +940,7 @@
     },
     {
       "id": "avila-sp1-grades",
-      "title": "ð Spring 1 - Grades Due",
+      "title": "Ã°ÂÂÂ Spring 1 - Grades Due",
       "phase": "phase-1",
       "type": "milestone",
       "status": "pending",
@@ -953,7 +953,7 @@
     },
     {
       "id": "avila-sp2-syllabus",
-      "title": "ð Spring 2 - Course Published & Syllabus Due",
+      "title": "Ã°ÂÂÂ Spring 2 - Course Published & Syllabus Due",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -966,7 +966,7 @@
     },
     {
       "id": "avila-sp2-start",
-      "title": "ð Spring 2 - Term Starts",
+      "title": "Ã°ÂÂÂ Spring 2 - Term Starts",
       "phase": "phase-1",
       "type": "milestone",
       "status": "pending",
@@ -981,7 +981,7 @@
     },
     {
       "id": "avila-su1-syllabus",
-      "title": "ð Summer 1 - Course Published & Syllabus Due",
+      "title": "Ã°ÂÂÂ Summer 1 - Course Published & Syllabus Due",
       "phase": "phase-2",
       "type": "task",
       "status": "pending",
@@ -994,7 +994,7 @@
     },
     {
       "id": "avila-sp2-grades",
-      "title": "ð Spring 2 - Grades Due",
+      "title": "Ã°ÂÂÂ Spring 2 - Grades Due",
       "phase": "phase-3",
       "type": "milestone",
       "status": "pending",
@@ -1007,7 +1007,7 @@
     },
     {
       "id": "avila-su1-start",
-      "title": "ð Summer 1 - Term Starts",
+      "title": "Ã°ÂÂÂ Summer 1 - Term Starts",
       "phase": "phase-3",
       "type": "milestone",
       "status": "pending",

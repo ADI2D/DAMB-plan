@@ -11,35 +11,74 @@
       "id": "dallas-move",
       "name": "Dallas Move",
       "color": "#ec4899",
-      "icon": "🏠"
+      "icon": "ð "
     },
     {
       "id": "special-strong",
       "name": "Special Strong",
       "color": "#3b82f6",
-      "icon": "💪",
+      "icon": "ðª",
       "subcategories": [
-        { "id": "onboarding", "name": "Onboarding" },
-        { "id": "90-day-plan", "name": "90 Day Plan" },
-        { "id": "admin", "name": "Admin/Setup" },
-        { "id": "strategy", "name": "Strategy" },
-        { "id": "funnel", "name": "Funnel/Marketing" },
-        { "id": "systems", "name": "Systems/CRM" },
-        { "id": "leadership", "name": "Leadership" }
+        {
+          "id": "onboarding",
+          "name": "Onboarding"
+        },
+        {
+          "id": "90-day-plan",
+          "name": "90 Day Plan"
+        },
+        {
+          "id": "admin",
+          "name": "Admin/Setup"
+        },
+        {
+          "id": "strategy",
+          "name": "Strategy"
+        },
+        {
+          "id": "funnel",
+          "name": "Funnel/Marketing"
+        },
+        {
+          "id": "systems",
+          "name": "Systems/CRM"
+        },
+        {
+          "id": "leadership",
+          "name": "Leadership"
+        }
       ]
     },
     {
       "id": "avila",
       "name": "Avila University",
       "color": "#8b5cf6",
-      "icon": "🎓",
+      "icon": "ð",
       "subcategories": [
-        { "id": "spring-1", "name": "Spring 1" },
-        { "id": "spring-2", "name": "Spring 2" },
-        { "id": "summer-1", "name": "Summer 1" },
-        { "id": "summer-2", "name": "Summer 2" },
-        { "id": "fall-1", "name": "Fall 1" },
-        { "id": "fall-2", "name": "Fall 2" }
+        {
+          "id": "spring-1",
+          "name": "Spring 1"
+        },
+        {
+          "id": "spring-2",
+          "name": "Spring 2"
+        },
+        {
+          "id": "summer-1",
+          "name": "Summer 1"
+        },
+        {
+          "id": "summer-2",
+          "name": "Summer 2"
+        },
+        {
+          "id": "fall-1",
+          "name": "Fall 1"
+        },
+        {
+          "id": "fall-2",
+          "name": "Fall 2"
+        }
       ]
     }
   ],
@@ -97,10 +136,16 @@
       "dueDate": "2026-02-02",
       "dependencies": [],
       "category": "dallas-move",
-      "notes": "📞 1-800-639-8946 (1-800-WINDOWWORLD) | Window 1: S/N 126-4-21270, 48 7/8 x 17 1/4 | Window 2: S/N 126-4-20369, 35 3/4 x 53 1/2 | PO: B261 | Original install: 03/14/11",
+      "notes": "ð 1-800-639-8946 (1-800-WINDOWWORLD) | Window 1: S/N 126-4-21270, 48 7/8 x 17 1/4 | Window 2: S/N 126-4-20369, 35 3/4 x 53 1/2 | PO: B261 | Original install: 03/14/11",
       "attachments": [
-        {"name": "Window 1 - S/N 126-4-21270", "path": "attachments/window-1-sn-126-4-21270.jpg"},
-        {"name": "Window 2 - S/N 126-4-20369", "path": "attachments/window-2-sn-126-4-20369.jpg"}
+        {
+          "name": "Window 1 - S/N 126-4-21270",
+          "path": "attachments/window-1-sn-126-4-21270.jpg"
+        },
+        {
+          "name": "Window 2 - S/N 126-4-20369",
+          "path": "attachments/window-2-sn-126-4-20369.jpg"
+        }
       ]
     },
     {
@@ -123,7 +168,9 @@
       "status": "pending",
       "owner": "Melanie",
       "dueDate": "2026-02-14",
-      "dependencies": ["t2"],
+      "dependencies": [
+        "t2"
+      ],
       "category": "dallas-move",
       "notes": "Melanie follows after truck"
     },
@@ -197,7 +244,10 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-02-23",
-      "dependencies": ["t2", "t3"],
+      "dependencies": [
+        "t2",
+        "t3"
+      ],
       "category": "special-strong",
       "subcategory": "90-day-plan",
       "notes": "First day at Adaptive Fitness"
@@ -210,7 +260,10 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-01",
-      "dependencies": ["t9", "t4"],
+      "dependencies": [
+        "t9",
+        "t4"
+      ],
       "category": "special-strong",
       "subcategory": "systems",
       "notes": "Bleeding neck - leads going to wrong franchisees"
@@ -223,11 +276,19 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-15",
-      "dependencies": ["t10"],
+      "dependencies": [
+        "t10"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "notes": "Q3 Bonus Deliverable A.1 - Requires Managing Member approval",
-      "subtasks": ["t11-a", "t11-b", "t11-c", "t11-d", "t11-e"]
+      "subtasks": [
+        "t11-a",
+        "t11-b",
+        "t11-c",
+        "t11-d",
+        "t11-e"
+      ]
     },
     {
       "id": "t11-a",
@@ -237,7 +298,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-02",
-      "dependencies": ["t10"],
+      "dependencies": [
+        "t10"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t11",
@@ -251,7 +314,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-06",
-      "dependencies": ["t11-a"],
+      "dependencies": [
+        "t11-a"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t11",
@@ -265,7 +330,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-09",
-      "dependencies": ["t11-b"],
+      "dependencies": [
+        "t11-b"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t11",
@@ -279,7 +346,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-12",
-      "dependencies": ["t11-c"],
+      "dependencies": [
+        "t11-c"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t11",
@@ -293,7 +362,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-15",
-      "dependencies": ["t11-d"],
+      "dependencies": [
+        "t11-d"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t11",
@@ -307,11 +378,19 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-15",
-      "dependencies": ["t10"],
+      "dependencies": [
+        "t10"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable A.2",
-      "subtasks": ["t12-a", "t12-b", "t12-c", "t12-d", "t12-e"]
+      "subtasks": [
+        "t12-a",
+        "t12-b",
+        "t12-c",
+        "t12-d",
+        "t12-e"
+      ]
     },
     {
       "id": "t12-a",
@@ -321,7 +400,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-03",
-      "dependencies": ["t10"],
+      "dependencies": [
+        "t10"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "parent": "t12",
@@ -335,7 +416,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-07",
-      "dependencies": ["t12-a"],
+      "dependencies": [
+        "t12-a"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "parent": "t12",
@@ -349,7 +432,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-10",
-      "dependencies": ["t12-b"],
+      "dependencies": [
+        "t12-b"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "parent": "t12",
@@ -363,7 +448,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-13",
-      "dependencies": ["t12-c"],
+      "dependencies": [
+        "t12-c"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "parent": "t12",
@@ -377,7 +464,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-15",
-      "dependencies": ["t12-d"],
+      "dependencies": [
+        "t12-d"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "parent": "t12",
@@ -391,11 +480,19 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-20",
-      "dependencies": ["t11", "t12"],
+      "dependencies": [
+        "t11",
+        "t12"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable A.3",
-      "subtasks": ["t13-a", "t13-b", "t13-c", "t13-d"]
+      "subtasks": [
+        "t13-a",
+        "t13-b",
+        "t13-c",
+        "t13-d"
+      ]
     },
     {
       "id": "t13-a",
@@ -405,7 +502,10 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-16",
-      "dependencies": ["t11", "t12"],
+      "dependencies": [
+        "t11",
+        "t12"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "parent": "t13",
@@ -419,7 +519,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-17",
-      "dependencies": ["t13-a"],
+      "dependencies": [
+        "t13-a"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "parent": "t13",
@@ -433,7 +535,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-18",
-      "dependencies": ["t13-b"],
+      "dependencies": [
+        "t13-b"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "parent": "t13",
@@ -447,7 +551,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-20",
-      "dependencies": ["t13-c"],
+      "dependencies": [
+        "t13-c"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "parent": "t13",
@@ -461,11 +567,20 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-20",
-      "dependencies": ["t7", "t11"],
+      "dependencies": [
+        "t7",
+        "t11"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "notes": "Q3 Bonus Deliverable A.4",
-      "subtasks": ["t14-a", "t14-b", "t14-c", "t14-d", "t14-e"]
+      "subtasks": [
+        "t14-a",
+        "t14-b",
+        "t14-c",
+        "t14-d",
+        "t14-e"
+      ]
     },
     {
       "id": "t14-a",
@@ -475,7 +590,10 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-16",
-      "dependencies": ["t7", "t11"],
+      "dependencies": [
+        "t7",
+        "t11"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t14",
@@ -489,7 +607,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-17",
-      "dependencies": ["t14-a"],
+      "dependencies": [
+        "t14-a"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t14",
@@ -503,7 +623,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-18",
-      "dependencies": ["t14-b"],
+      "dependencies": [
+        "t14-b"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t14",
@@ -517,7 +639,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-19",
-      "dependencies": ["t14-c"],
+      "dependencies": [
+        "t14-c"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t14",
@@ -531,7 +655,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-20",
-      "dependencies": ["t14-d"],
+      "dependencies": [
+        "t14-d"
+      ],
       "category": "special-strong",
       "subcategory": "strategy",
       "parent": "t14",
@@ -545,11 +671,21 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-24",
-      "dependencies": ["t11", "t12", "t13", "t14"],
+      "dependencies": [
+        "t11",
+        "t12",
+        "t13",
+        "t14"
+      ],
       "category": "special-strong",
       "subcategory": "90-day-plan",
       "notes": "Q3 Bonus Deliverable A.5 - Rolling roadmap required",
-      "subtasks": ["t15-a", "t15-b", "t15-c", "t15-d"]
+      "subtasks": [
+        "t15-a",
+        "t15-b",
+        "t15-c",
+        "t15-d"
+      ]
     },
     {
       "id": "t15-a",
@@ -559,7 +695,12 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-21",
-      "dependencies": ["t11", "t12", "t13", "t14"],
+      "dependencies": [
+        "t11",
+        "t12",
+        "t13",
+        "t14"
+      ],
       "category": "special-strong",
       "subcategory": "90-day-plan",
       "parent": "t15",
@@ -573,7 +714,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-22",
-      "dependencies": ["t15-a"],
+      "dependencies": [
+        "t15-a"
+      ],
       "category": "special-strong",
       "subcategory": "90-day-plan",
       "parent": "t15",
@@ -587,7 +730,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-23",
-      "dependencies": ["t15-b"],
+      "dependencies": [
+        "t15-b"
+      ],
       "category": "special-strong",
       "subcategory": "90-day-plan",
       "parent": "t15",
@@ -601,7 +746,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-24",
-      "dependencies": ["t15-c"],
+      "dependencies": [
+        "t15-c"
+      ],
       "category": "special-strong",
       "subcategory": "90-day-plan",
       "parent": "t15",
@@ -615,20 +762,25 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-04-07",
-      "dependencies": ["t12"],
+      "dependencies": [
+        "t12"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable B.1 - Traffic sources, capture flows, automation"
     },
     {
       "id": "t17",
-      "title": "End-to-end tracking (ad → trial → enrollment)",
+      "title": "End-to-end tracking (ad â trial â enrollment)",
       "phase": "phase-2",
       "type": "deliverable",
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-04-10",
-      "dependencies": ["t16", "t4"],
+      "dependencies": [
+        "t16",
+        "t4"
+      ],
       "category": "special-strong",
       "subcategory": "systems",
       "notes": "Q3 Bonus Deliverable B.3"
@@ -641,7 +793,10 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-04-15",
-      "dependencies": ["t16", "t14"],
+      "dependencies": [
+        "t16",
+        "t14"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable B.4"
@@ -654,7 +809,10 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-04-20",
-      "dependencies": ["t17", "t4"],
+      "dependencies": [
+        "t17",
+        "t4"
+      ],
       "category": "special-strong",
       "subcategory": "systems",
       "notes": "Q3 Bonus Deliverable B.5"
@@ -667,10 +825,12 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-04-15",
-      "dependencies": ["t12"],
+      "dependencies": [
+        "t12"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
-      "notes": "Q3 Bonus Deliverable C.1 - Traffic → close with benchmarks"
+      "notes": "Q3 Bonus Deliverable C.1 - Traffic â close with benchmarks"
     },
     {
       "id": "t21",
@@ -680,7 +840,10 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-05-01",
-      "dependencies": ["t16", "t19"],
+      "dependencies": [
+        "t16",
+        "t19"
+      ],
       "category": "special-strong",
       "subcategory": "systems",
       "notes": "Q3 Bonus Deliverable D.1"
@@ -693,7 +856,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-05-08",
-      "dependencies": ["t21"],
+      "dependencies": [
+        "t21"
+      ],
       "category": "special-strong",
       "subcategory": "systems",
       "notes": "Q3 Bonus Deliverable D.2"
@@ -706,7 +871,10 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-05-10",
-      "dependencies": ["t18", "t20"],
+      "dependencies": [
+        "t18",
+        "t20"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable D.3"
@@ -719,7 +887,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-05-15",
-      "dependencies": ["t19"],
+      "dependencies": [
+        "t19"
+      ],
       "category": "special-strong",
       "subcategory": "leadership",
       "notes": "Q3 Bonus Deliverable E.1"
@@ -732,7 +902,10 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-05-20",
-      "dependencies": ["t15", "t24"],
+      "dependencies": [
+        "t15",
+        "t24"
+      ],
       "category": "special-strong",
       "subcategory": "leadership",
       "notes": "Q3 Bonus Deliverable E.2"
@@ -745,7 +918,9 @@
       "status": "pending",
       "owner": "Daniel",
       "dueDate": "2026-05-24",
-      "dependencies": ["t25"],
+      "dependencies": [
+        "t25"
+      ],
       "category": "special-strong",
       "subcategory": "leadership",
       "notes": "Q3 Bonus Deliverable E.3 - CRITICAL: No bonus without written approval"
@@ -765,7 +940,7 @@
     },
     {
       "id": "avila-sp1-grades",
-      "title": "🎓 Spring 1 - Grades Due",
+      "title": "ð Spring 1 - Grades Due",
       "phase": "phase-1",
       "type": "milestone",
       "status": "pending",
@@ -778,7 +953,7 @@
     },
     {
       "id": "avila-sp2-syllabus",
-      "title": "🎓 Spring 2 - Course Published & Syllabus Due",
+      "title": "ð Spring 2 - Course Published & Syllabus Due",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -791,20 +966,22 @@
     },
     {
       "id": "avila-sp2-start",
-      "title": "🎓 Spring 2 - Term Starts",
+      "title": "ð Spring 2 - Term Starts",
       "phase": "phase-1",
       "type": "milestone",
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-16",
-      "dependencies": ["avila-sp2-syllabus"],
+      "dependencies": [
+        "avila-sp2-syllabus"
+      ],
       "category": "avila",
       "subcategory": "spring-2",
       "notes": "Spring 2 term begins. Runs through May 9."
     },
     {
       "id": "avila-su1-syllabus",
-      "title": "🎓 Summer 1 - Course Published & Syllabus Due",
+      "title": "ð Summer 1 - Course Published & Syllabus Due",
       "phase": "phase-2",
       "type": "task",
       "status": "pending",
@@ -817,7 +994,7 @@
     },
     {
       "id": "avila-sp2-grades",
-      "title": "🎓 Spring 2 - Grades Due",
+      "title": "ð Spring 2 - Grades Due",
       "phase": "phase-3",
       "type": "milestone",
       "status": "pending",
@@ -830,89 +1007,183 @@
     },
     {
       "id": "avila-su1-start",
-      "title": "🎓 Summer 1 - Term Starts",
+      "title": "ð Summer 1 - Term Starts",
       "phase": "phase-3",
       "type": "milestone",
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-05-11",
-      "dependencies": ["avila-su1-syllabus"],
+      "dependencies": [
+        "avila-su1-syllabus"
+      ],
       "category": "avila",
       "subcategory": "summer-1",
       "notes": "Summer 1 term begins. Runs through Jul 4."
     }
   ],
   "contacts": [
-    {"name": "Daniel Stein", "role": "CEO", "email": "daniel@specialstrong.com"},
-    {"name": "Dwayne Stoltzfus", "role": "Managing Member", "email": "dwayne@ethnoholdings.com"},
-    {"name": "Graham", "role": "Sales/Workflows", "email": ""},
-    {"name": "Judah", "role": "SGP Architecture", "email": ""}
+    {
+      "name": "Daniel Stein",
+      "role": "CEO",
+      "email": "daniel@specialstrong.com"
+    },
+    {
+      "name": "Dwayne Stoltzfus",
+      "role": "Managing Member",
+      "email": "dwayne@ethnoholdings.com"
+    },
+    {
+      "name": "Graham",
+      "role": "Sales/Workflows",
+      "email": ""
+    },
+    {
+      "name": "Judah",
+      "role": "SGP Architecture",
+      "email": ""
+    }
   ],
   "userData": {
     "t1": {
       "notes": "Signed with Adaptive Fitness LLC. Base salary + Q3 bonus structure tied to deliverables.",
       "contacts": [
-        {"name": "Daniel Stein", "role": "CEO", "email": "daniel@specialstrong.com"},
-        {"name": "Dwayne Stoltzfus", "role": "Managing Member (Ethno Holdings)", "email": "dwayne@ethnoholdings.com"}
+        {
+          "name": "Daniel Stein",
+          "role": "CEO",
+          "email": "daniel@specialstrong.com"
+        },
+        {
+          "name": "Dwayne Stoltzfus",
+          "role": "Managing Member (Ethno Holdings)",
+          "email": "dwayne@ethnoholdings.com"
+        }
       ],
       "messages": [
-        {"date": "2026-01-24", "medium": "email", "text": "Received final offer letter from Daniel with compensation breakdown"},
-        {"date": "2026-01-25", "medium": "call", "text": "Call with Dwayne to discuss Q3 bonus deliverables and approval process"},
-        {"date": "2026-01-27", "medium": "email", "text": "Signed agreement returned. Start date confirmed Feb 23."}
+        {
+          "date": "2026-01-24",
+          "medium": "email",
+          "text": "Received final offer letter from Daniel with compensation breakdown"
+        },
+        {
+          "date": "2026-01-25",
+          "medium": "call",
+          "text": "Call with Dwayne to discuss Q3 bonus deliverables and approval process"
+        },
+        {
+          "date": "2026-01-27",
+          "medium": "email",
+          "text": "Signed agreement returned. Start date confirmed Feb 23."
+        }
       ],
       "status": "complete"
     },
     "t2": {
       "notes": "Moving truck scheduled. Storage unit secured in Dallas area.",
       "contacts": [
-        {"name": "Two Men and a Truck", "role": "Moving Company", "email": ""}
+        {
+          "name": "Two Men and a Truck",
+          "role": "Moving Company",
+          "email": ""
+        }
       ],
       "messages": [
-        {"date": "2026-01-28", "medium": "call", "text": "Booked moving company. Pickup Feb 9, delivery Feb 10-11."},
-        {"date": "2026-01-30", "medium": "text", "text": "Confirmed packing supplies delivery for Feb 7"}
+        {
+          "date": "2026-01-28",
+          "medium": "call",
+          "text": "Booked moving company. Pickup Feb 9, delivery Feb 10-11."
+        },
+        {
+          "date": "2026-01-30",
+          "medium": "text",
+          "text": "Confirmed packing supplies delivery for Feb 7"
+        }
       ],
       "status": "in-progress"
     },
     "t4": {
       "notes": "Judah is the technical lead on SGP. Need to understand data flow, lead routing logic, and integration points.",
       "contacts": [
-        {"name": "Judah", "role": "SGP Architecture Lead", "email": ""}
+        {
+          "name": "Judah",
+          "role": "SGP Architecture Lead",
+          "email": ""
+        }
       ],
       "messages": [
-        {"date": "2026-01-29", "medium": "email", "text": "Intro email from Daniel connecting me with Judah"},
-        {"date": "2026-01-30", "medium": "text", "text": "Judah confirmed availability for Feb 4 deep dive session"}
+        {
+          "date": "2026-01-29",
+          "medium": "email",
+          "text": "Intro email from Daniel connecting me with Judah"
+        },
+        {
+          "date": "2026-01-30",
+          "medium": "text",
+          "text": "Judah confirmed availability for Feb 4 deep dive session"
+        }
       ],
       "status": "pending"
     },
     "t5": {
       "notes": "Pre-start onboarding to get up to speed. 15-30 hours expected. $5k signing bonus for completion.",
       "contacts": [
-        {"name": "Graham", "role": "Sales/Workflows Lead", "email": ""}
+        {
+          "name": "Graham",
+          "role": "Sales/Workflows Lead",
+          "email": ""
+        }
       ],
       "messages": [
-        {"date": "2026-01-27", "medium": "meeting", "text": "Initial onboarding call with Graham - overview of sales process and current workflows"},
-        {"date": "2026-01-29", "medium": "slack", "text": "Graham shared access to sales playbook and CRM documentation"},
-        {"date": "2026-01-31", "medium": "meeting", "text": "Second session with Graham - lead scoring and follow-up sequences"}
+        {
+          "date": "2026-01-27",
+          "medium": "meeting",
+          "text": "Initial onboarding call with Graham - overview of sales process and current workflows"
+        },
+        {
+          "date": "2026-01-29",
+          "medium": "slack",
+          "text": "Graham shared access to sales playbook and CRM documentation"
+        },
+        {
+          "date": "2026-01-31",
+          "medium": "meeting",
+          "text": "Second session with Graham - lead scoring and follow-up sequences"
+        }
       ],
       "status": "in-progress"
     },
     "t6": {
       "notes": "Need contractor access for marketing support hires",
       "contacts": [
-        {"name": "Daniel Stein", "role": "CEO", "email": "daniel@specialstrong.com"}
+        {
+          "name": "Daniel Stein",
+          "role": "CEO",
+          "email": "daniel@specialstrong.com"
+        }
       ],
       "messages": [
-        {"date": "2026-01-30", "medium": "email", "text": "Requested Upwork job posting access from Daniel"}
+        {
+          "date": "2026-01-30",
+          "medium": "email",
+          "text": "Requested Upwork job posting access from Daniel"
+        }
       ],
       "status": "pending"
     },
     "t7": {
       "notes": "Critical for budget allocation model deliverable",
       "contacts": [
-        {"name": "Daniel Stein", "role": "CEO", "email": "daniel@specialstrong.com"}
+        {
+          "name": "Daniel Stein",
+          "role": "CEO",
+          "email": "daniel@specialstrong.com"
+        }
       ],
       "messages": [
-        {"date": "2026-01-31", "medium": "email", "text": "Sent request for full 2026 marketing budget and P&L access"}
+        {
+          "date": "2026-01-31",
+          "medium": "email",
+          "text": "Sent request for full 2026 marketing budget and P&L access"
+        }
       ],
       "status": "pending"
     },
@@ -920,9 +1191,27 @@
       "notes": "BLEEDING NECK ISSUE - Leads going to wrong franchisees. Priority #1 after start.",
       "contacts": [],
       "messages": [
-        {"date": "2026-01-28", "medium": "meeting", "text": "Daniel flagged lead routing as critical issue during pre-start call. Franchisees frustrated with misrouted leads."}
+        {
+          "date": "2026-01-28",
+          "medium": "meeting",
+          "text": "Daniel flagged lead routing as critical issue during pre-start call. Franchisees frustrated with misrouted leads."
+        }
       ],
       "status": "pending"
+    },
+    "t28": {
+      "notes": "📞 1-800-639-8946 (1-800-WINDOWWORLD) | Window 1: S/N 126-4-21270, 48 7/8 x 17 1/4 | Window 2: S/N 126-4-20369, 35 3/4 x 53 1/2 | PO: B261 | Original install: 03/14/11",
+      "contacts": [],
+      "messages": [],
+      "attachments": [],
+      "status": null
+    },
+    "t12": {
+      "notes": "Q3 Bonus Deliverable A.2",
+      "contacts": [],
+      "messages": [],
+      "attachments": [],
+      "status": null
     }
   }
 }

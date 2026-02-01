@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Special Strong - 90 Day Plan</title>
+  <title>DAMB Plan</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -258,6 +258,66 @@
     .task-type.deliverable { background: var(--success); }
     .task-type.task { background: var(--accent); }
     .task-type.decision { background: var(--warning); color: #000; }
+    
+    /* Category badges */
+    .task-category {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .task-subcategory {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 500;
+      white-space: nowrap;
+      background: rgba(255,255,255,0.1);
+      color: var(--text-muted);
+    }
+    
+    .category-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    
+    /* Category filter pills */
+    .category-filters {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .category-filter-btn {
+      padding: 6px 14px;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .category-filter-btn:hover {
+      filter: brightness(1.1);
+    }
+    
+    .category-filter-btn.active {
+      box-shadow: 0 0 0 2px var(--text);
+    }
     
     .task-meta {
       display: flex;
@@ -824,7 +884,7 @@
   <div class="container">
     <header>
       <div>
-        <h1>🎯 Special Strong - 90 Day Plan</h1>
+        <h1>🎯 DAMB Plan</h1>
         <div class="subtitle">VP of Sales & Marketing | Start: Feb 23, 2026</div>
       </div>
       <div class="header-actions">
@@ -848,6 +908,10 @@
         </div>
       </div>
     </header>
+    
+    <div class="category-filters" id="category-filters">
+      <!-- Populated by JS -->
+    </div>
     
     <div class="filters">
       <button class="filter-btn active" data-filter="all">All</button>
@@ -985,8 +1049,10 @@
   <script>
     let data = null;
     let currentFilter = 'all';
+    let currentCategory = 'all';
     let selectedTask = null;
     let localData = {}; // For storing edits in localStorage
+    let categoryMap = {}; // Quick lookup for categories
     
     const STORAGE_KEY = 'special-strong-90day-local';
     const SETTINGS_KEY = 'special-strong-90day-settings';
@@ -1251,11 +1317,68 @@
     }
     
     function render() {
+      buildCategoryMap();
+      renderCategoryFilters();
       renderStats();
       renderTimeline();
       renderTasks();
       renderFocus();
       renderDependencies();
+    }
+    
+    function buildCategoryMap() {
+      categoryMap = {};
+      if (data.categories) {
+        data.categories.forEach(cat => {
+          categoryMap[cat.id] = cat;
+        });
+      }
+    }
+    
+    function getCategoryInfo(categoryId) {
+      return categoryMap[categoryId] || { name: categoryId, color: '#6b7280', icon: '📁' };
+    }
+    
+    function getSubcategoryName(categoryId, subcategoryId) {
+      const cat = categoryMap[categoryId];
+      if (cat && cat.subcategories) {
+        const sub = cat.subcategories.find(s => s.id === subcategoryId);
+        return sub ? sub.name : subcategoryId;
+      }
+      return subcategoryId || '';
+    }
+    
+    function renderCategoryFilters() {
+      const container = document.getElementById('category-filters');
+      if (!data.categories || data.categories.length === 0) {
+        container.style.display = 'none';
+        return;
+      }
+      
+      let html = `<button class="category-filter-btn ${currentCategory === 'all' ? 'active' : ''}" 
+                          data-category="all" 
+                          style="background: var(--surface-hover); color: var(--text);">
+                    All Categories
+                  </button>`;
+      
+      data.categories.forEach(cat => {
+        html += `<button class="category-filter-btn ${currentCategory === cat.id ? 'active' : ''}" 
+                         data-category="${cat.id}"
+                         style="background: ${cat.color}22; color: ${cat.color}; border-color: ${cat.color};">
+                   ${cat.icon} ${cat.name}
+                 </button>`;
+      });
+      
+      container.innerHTML = html;
+      
+      // Add click handlers
+      container.querySelectorAll('.category-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentCategory = btn.dataset.category;
+          renderCategoryFilters();
+          renderTasks();
+        });
+      });
     }
     
     function renderStats() {
@@ -1294,14 +1417,24 @@
     }
     
     function filterTasks(tasks) {
-      if (currentFilter === 'all') return tasks;
-      if (['milestone', 'deliverable', 'task', 'decision'].includes(currentFilter)) {
-        return tasks.filter(t => t.type === currentFilter);
+      let filtered = tasks;
+      
+      // Category filter
+      if (currentCategory !== 'all') {
+        filtered = filtered.filter(t => t.category === currentCategory);
       }
-      if (['pending', 'in-progress', 'complete'].includes(currentFilter)) {
-        return tasks.filter(t => t.status === currentFilter);
+      
+      // Type/status filter
+      if (currentFilter !== 'all') {
+        if (['milestone', 'deliverable', 'task', 'decision'].includes(currentFilter)) {
+          filtered = filtered.filter(t => t.type === currentFilter);
+        }
+        if (['pending', 'in-progress', 'complete'].includes(currentFilter)) {
+          filtered = filtered.filter(t => t.status === currentFilter);
+        }
       }
-      return tasks;
+      
+      return filtered;
     }
     
     function renderTasks() {
@@ -1324,9 +1457,18 @@
             <div class="task-list">
               ${phaseTasks.map(task => {
                 const isOverdue = task.dueDate && task.dueDate < today && task.status !== 'complete';
+                const catInfo = getCategoryInfo(task.category);
+                const subName = getSubcategoryName(task.category, task.subcategory);
                 return `
                   <div class="task-card ${task.status} ${isOverdue ? 'overdue' : ''}" 
-                       onclick="openTask('${task.id}')">
+                       onclick="openTask('${task.id}')"
+                       style="border-left-color: ${task.status === 'complete' ? 'var(--success)' : task.status === 'in-progress' ? 'var(--warning)' : catInfo.color};">
+                    <div class="category-row">
+                      <span class="task-category" style="background: ${catInfo.color}22; color: ${catInfo.color};">
+                        ${catInfo.icon} ${catInfo.name}
+                      </span>
+                      ${subName ? `<span class="task-subcategory">${subName}</span>` : ''}
+                    </div>
                     <div class="task-header">
                       <span class="task-title">${task.title}</span>
                       <span class="task-type ${task.type}">${task.type}</span>
@@ -1373,23 +1515,35 @@
       if (urgent.length === 0) {
         todayEl.innerHTML = '<div class="focus-item">✅ No urgent items</div>';
       } else {
-        todayEl.innerHTML = urgent.map(t => `
-          <div class="focus-item urgent">
-            <strong>${t.title}</strong>
-            <div class="countdown">${t.dueDate === today ? 'Due today' : 'Overdue: ' + formatDate(t.dueDate)}</div>
-          </div>
-        `).join('');
+        todayEl.innerHTML = urgent.map(t => {
+          const catInfo = getCategoryInfo(t.category);
+          return `
+            <div class="focus-item urgent" style="border-left-color: ${catInfo.color};">
+              <span class="task-category" style="background: ${catInfo.color}22; color: ${catInfo.color}; font-size: 10px; padding: 1px 6px; margin-bottom: 4px; display: inline-block;">
+                ${catInfo.icon} ${catInfo.name}
+              </span>
+              <div><strong>${t.title}</strong></div>
+              <div class="countdown">${t.dueDate === today ? 'Due today' : 'Overdue: ' + formatDate(t.dueDate)}</div>
+            </div>
+          `;
+        }).join('');
       }
       
       if (upcoming.length === 0) {
         upcomingEl.innerHTML = '<div class="focus-item">No items in next 7 days</div>';
       } else {
-        upcomingEl.innerHTML = upcoming.map(t => `
-          <div class="focus-item soon">
-            <strong>${t.title}</strong>
-            <div class="countdown">${formatDate(t.dueDate)} (${daysBetween(today, t.dueDate)} days)</div>
-          </div>
-        `).join('');
+        upcomingEl.innerHTML = upcoming.map(t => {
+          const catInfo = getCategoryInfo(t.category);
+          return `
+            <div class="focus-item soon" style="border-left-color: ${catInfo.color};">
+              <span class="task-category" style="background: ${catInfo.color}22; color: ${catInfo.color}; font-size: 10px; padding: 1px 6px; margin-bottom: 4px; display: inline-block;">
+                ${catInfo.icon} ${catInfo.name}
+              </span>
+              <div><strong>${t.title}</strong></div>
+              <div class="countdown">${formatDate(t.dueDate)} (${daysBetween(today, t.dueDate)} days)</div>
+            </div>
+          `;
+        }).join('');
       }
     }
     
@@ -1436,7 +1590,16 @@
         (t.dependencies || []).includes(selectedTask.id)
       ).map(t => t.title);
       
+      const catInfo = getCategoryInfo(selectedTask.category);
+      const subName = getSubcategoryName(selectedTask.category, selectedTask.subcategory);
+      
       document.getElementById('modal-content').innerHTML = `
+        <div class="category-row" style="margin-bottom: 16px;">
+          <span class="task-category" style="background: ${catInfo.color}22; color: ${catInfo.color}; font-size: 13px; padding: 4px 12px;">
+            ${catInfo.icon} ${catInfo.name}
+          </span>
+          ${subName ? `<span class="task-subcategory" style="font-size: 12px; padding: 4px 10px;">${subName}</span>` : ''}
+        </div>
         <p><strong>Type:</strong> ${selectedTask.type}</p>
         <p><strong>Status:</strong> <span class="status ${selectedTask.status}"><span class="status-dot"></span> ${selectedTask.status.replace('-', ' ')}</span></p>
         <p><strong>Owner:</strong> ${selectedTask.owner}</p>

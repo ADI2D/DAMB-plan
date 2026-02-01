@@ -1,11 +1,34 @@
 {
   "meta": {
-    "title": "Special Strong - 90 Day Plan",
+    "title": "DAMB Plan",
     "role": "VP of Sales & Marketing",
     "startDate": "2026-02-23",
     "endDate": "2026-05-24",
-    "lastUpdated": "2026-01-31"
+    "lastUpdated": "2026-02-01"
   },
+  "categories": [
+    {
+      "id": "dallas-move",
+      "name": "Dallas Move",
+      "color": "#ec4899",
+      "icon": "🏠"
+    },
+    {
+      "id": "special-strong",
+      "name": "Special Strong",
+      "color": "#3b82f6",
+      "icon": "💪",
+      "subcategories": [
+        { "id": "onboarding", "name": "Onboarding" },
+        { "id": "90-day-plan", "name": "90 Day Plan" },
+        { "id": "admin", "name": "Admin/Setup" },
+        { "id": "strategy", "name": "Strategy" },
+        { "id": "funnel", "name": "Funnel/Marketing" },
+        { "id": "systems", "name": "Systems/CRM" },
+        { "id": "leadership", "name": "Leadership" }
+      ]
+    }
+  ],
   "phases": [
     {
       "id": "pre-start",
@@ -46,6 +69,8 @@
       "owner": "Alex",
       "dueDate": "2026-01-27",
       "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "onboarding",
       "notes": "Signed with Adaptive Fitness LLC"
     },
     {
@@ -57,6 +82,7 @@
       "owner": "Alex",
       "dueDate": "2026-02-09",
       "dependencies": [],
+      "category": "dallas-move",
       "notes": "Truck departs Olathe with belongings"
     },
     {
@@ -68,6 +94,7 @@
       "owner": "Melanie",
       "dueDate": "2026-02-14",
       "dependencies": ["t2"],
+      "category": "dallas-move",
       "notes": "Melanie follows after truck"
     },
     {
@@ -79,6 +106,8 @@
       "owner": "Alex",
       "dueDate": "2026-02-04",
       "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "onboarding",
       "notes": "Understand Strong Growth Platform data flow"
     },
     {
@@ -90,6 +119,8 @@
       "owner": "Alex",
       "dueDate": "2026-02-22",
       "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "onboarding",
       "notes": "15-30 hours pre-start work, $5k signing bonus"
     },
     {
@@ -100,6 +131,8 @@
       "status": "pending",
       "owner": "Daniel",
       "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "admin",
       "notes": "Request from Daniel"
     },
     {
@@ -110,6 +143,8 @@
       "status": "pending",
       "owner": "Alex",
       "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "admin",
       "notes": "Need visibility into budget allocation"
     },
     {
@@ -120,6 +155,8 @@
       "status": "pending",
       "owner": "Alex",
       "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "admin",
       "notes": ""
     },
     {
@@ -131,6 +168,8 @@
       "owner": "Alex",
       "dueDate": "2026-02-23",
       "dependencies": ["t2", "t3"],
+      "category": "special-strong",
+      "subcategory": "90-day-plan",
       "notes": "First day at Adaptive Fitness"
     },
     {
@@ -142,6 +181,8 @@
       "owner": "Alex",
       "dueDate": "2026-03-01",
       "dependencies": ["t9", "t4"],
+      "category": "special-strong",
+      "subcategory": "systems",
       "notes": "Bleeding neck - leads going to wrong franchisees"
     },
     {
@@ -153,6 +194,8 @@
       "owner": "Alex",
       "dueDate": "2026-03-15",
       "dependencies": ["t10"],
+      "category": "special-strong",
+      "subcategory": "strategy",
       "notes": "Q3 Bonus Deliverable A.1 - Requires Managing Member approval"
     },
     {
@@ -164,6 +207,8 @@
       "owner": "Alex",
       "dueDate": "2026-03-15",
       "dependencies": ["t10"],
+      "category": "special-strong",
+      "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable A.2"
     },
     {
@@ -175,6 +220,8 @@
       "owner": "Alex",
       "dueDate": "2026-03-20",
       "dependencies": ["t11", "t12"],
+      "category": "special-strong",
+      "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable A.3"
     },
     {
@@ -186,6 +233,8 @@
       "owner": "Alex",
       "dueDate": "2026-03-20",
       "dependencies": ["t7", "t11"],
+      "category": "special-strong",
+      "subcategory": "strategy",
       "notes": "Q3 Bonus Deliverable A.4"
     },
     {
@@ -197,6 +246,8 @@
       "owner": "Alex",
       "dueDate": "2026-03-24",
       "dependencies": ["t11", "t12", "t13", "t14"],
+      "category": "special-strong",
+      "subcategory": "90-day-plan",
       "notes": "Q3 Bonus Deliverable A.5 - Rolling roadmap required"
     },
     {
@@ -208,6 +259,8 @@
       "owner": "Alex",
       "dueDate": "2026-04-07",
       "dependencies": ["t12"],
+      "category": "special-strong",
+      "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable B.1 - Traffic sources, capture flows, automation"
     },
     {
@@ -219,6 +272,8 @@
       "owner": "Alex",
       "dueDate": "2026-04-10",
       "dependencies": ["t16", "t4"],
+      "category": "special-strong",
+      "subcategory": "systems",
       "notes": "Q3 Bonus Deliverable B.3"
     },
     {
@@ -230,6 +285,8 @@
       "owner": "Alex",
       "dueDate": "2026-04-15",
       "dependencies": ["t16", "t14"],
+      "category": "special-strong",
+      "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable B.4"
     },
     {
@@ -241,6 +298,8 @@
       "owner": "Alex",
       "dueDate": "2026-04-20",
       "dependencies": ["t17", "t4"],
+      "category": "special-strong",
+      "subcategory": "systems",
       "notes": "Q3 Bonus Deliverable B.5"
     },
     {
@@ -252,6 +311,8 @@
       "owner": "Alex",
       "dueDate": "2026-04-15",
       "dependencies": ["t12"],
+      "category": "special-strong",
+      "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable C.1 - Traffic → close with benchmarks"
     },
     {
@@ -263,6 +324,8 @@
       "owner": "Alex",
       "dueDate": "2026-05-01",
       "dependencies": ["t16", "t19"],
+      "category": "special-strong",
+      "subcategory": "systems",
       "notes": "Q3 Bonus Deliverable D.1"
     },
     {
@@ -274,6 +337,8 @@
       "owner": "Alex",
       "dueDate": "2026-05-08",
       "dependencies": ["t21"],
+      "category": "special-strong",
+      "subcategory": "systems",
       "notes": "Q3 Bonus Deliverable D.2"
     },
     {
@@ -285,6 +350,8 @@
       "owner": "Alex",
       "dueDate": "2026-05-10",
       "dependencies": ["t18", "t20"],
+      "category": "special-strong",
+      "subcategory": "funnel",
       "notes": "Q3 Bonus Deliverable D.3"
     },
     {
@@ -296,6 +363,8 @@
       "owner": "Alex",
       "dueDate": "2026-05-15",
       "dependencies": ["t19"],
+      "category": "special-strong",
+      "subcategory": "leadership",
       "notes": "Q3 Bonus Deliverable E.1"
     },
     {
@@ -307,6 +376,8 @@
       "owner": "Alex",
       "dueDate": "2026-05-20",
       "dependencies": ["t15", "t24"],
+      "category": "special-strong",
+      "subcategory": "leadership",
       "notes": "Q3 Bonus Deliverable E.2"
     },
     {
@@ -318,6 +389,8 @@
       "owner": "Daniel",
       "dueDate": "2026-05-24",
       "dependencies": ["t25"],
+      "category": "special-strong",
+      "subcategory": "leadership",
       "notes": "Q3 Bonus Deliverable E.3 - CRITICAL: No bonus without written approval"
     },
     {
@@ -329,6 +402,8 @@
       "owner": "Alex",
       "dueDate": "2026-05-24",
       "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "90-day-plan",
       "notes": "End of initial 90-day period"
     }
   ],

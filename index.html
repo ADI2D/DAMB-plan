@@ -258,6 +258,7 @@
     .task-type.deliverable { background: var(--success); }
     .task-type.task { background: var(--accent); }
     .task-type.decision { background: var(--warning); color: #000; }
+    .task-type.subtask { background: var(--text-muted); font-size: 10px; }
     
     /* Category badges */
     .task-category {
@@ -448,6 +449,316 @@
       transition: stroke-dashoffset 0.3s;
       transform: rotate(-90deg);
       transform-origin: 50% 50%;
+    }
+    
+    /* Mini progress ring for deliverable cards */
+    .mini-progress-ring {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+    
+    .mini-progress-ring svg {
+      transform: rotate(-90deg);
+    }
+    
+    .mini-progress-ring .ring-bg {
+      fill: none;
+      stroke: var(--surface-hover);
+      stroke-width: 3;
+    }
+    
+    .mini-progress-ring .ring-progress {
+      fill: none;
+      stroke: var(--success);
+      stroke-width: 3;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 0.3s ease;
+    }
+    
+    .mini-progress-ring .ring-text {
+      font-size: 8px;
+      font-weight: 700;
+      fill: var(--text);
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+    
+    /* Sub-tasks container */
+    .subtasks-container {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    
+    .subtasks-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-size: 12px;
+      color: var(--text-muted);
+      padding: 4px 0;
+      user-select: none;
+    }
+    
+    .subtasks-toggle:hover {
+      color: var(--accent);
+    }
+    
+    .subtasks-toggle-icon {
+      transition: transform 0.2s ease;
+      font-size: 10px;
+    }
+    
+    .subtasks-container.expanded .subtasks-toggle-icon {
+      transform: rotate(90deg);
+    }
+    
+    .subtasks-list {
+      display: none;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    
+    .subtasks-container.expanded .subtasks-list {
+      display: flex;
+      animation: slideDown 0.2s ease;
+    }
+    
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Sub-task chip */
+    .subtask-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 16px;
+      background: var(--surface-hover);
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+    }
+    
+    .subtask-chip:hover {
+      background: var(--border);
+      border-color: var(--accent);
+    }
+    
+    .subtask-chip.complete {
+      background: rgba(34, 197, 94, 0.15);
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+    
+    .subtask-chip.overdue {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: var(--danger);
+    }
+    
+    .subtask-checkbox {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+    
+    .subtask-chip.complete .subtask-checkbox {
+      background: var(--success);
+      border-color: var(--success);
+    }
+    
+    .subtask-checkbox::after {
+      content: '';
+      display: none;
+      width: 4px;
+      height: 7px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      margin-bottom: 2px;
+    }
+    
+    .subtask-chip.complete .subtask-checkbox::after {
+      display: block;
+    }
+    
+    .subtask-chip .subtask-due {
+      font-size: 9px;
+      color: var(--text-muted);
+      margin-left: 4px;
+    }
+    
+    .subtask-chip.overdue .subtask-due {
+      color: var(--danger);
+      font-weight: 600;
+    }
+    
+    /* Blocked badge */
+    .blocked-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--danger);
+      color: white;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-left: 8px;
+    }
+    
+    /* Work Plan section in modal */
+    .work-plan-section {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    
+    .work-plan-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .work-plan-progress {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: normal;
+    }
+    
+    .work-plan-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .work-plan-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 12px;
+      background: var(--bg);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+    }
+    
+    .work-plan-item:hover {
+      border-color: var(--accent);
+    }
+    
+    .work-plan-item.complete {
+      opacity: 0.6;
+    }
+    
+    .work-plan-item.overdue {
+      border-color: var(--danger);
+      background: rgba(239, 68, 68, 0.05);
+    }
+    
+    .work-plan-checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .work-plan-item.complete .work-plan-checkbox {
+      background: var(--success);
+      border-color: var(--success);
+    }
+    
+    .work-plan-checkbox::after {
+      content: '';
+      display: none;
+      width: 6px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      margin-bottom: 2px;
+    }
+    
+    .work-plan-item.complete .work-plan-checkbox::after {
+      display: block;
+    }
+    
+    .work-plan-content {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .work-plan-item-title {
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    .work-plan-item.complete .work-plan-item-title {
+      text-decoration: line-through;
+    }
+    
+    .work-plan-item-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    
+    .work-plan-item.overdue .work-plan-item-meta .due-date {
+      color: var(--danger);
+      font-weight: 600;
+    }
+    
+    .work-plan-empty {
+      color: var(--text-muted);
+      font-size: 13px;
+      padding: 12px;
+      text-align: center;
+      background: var(--bg);
+      border-radius: 8px;
+    }
+    
+    /* Deliverable header with progress */
+    .deliverable-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    
+    .deliverable-info {
+      flex: 1;
+      min-width: 0;
     }
     
     /* Empty state */
@@ -1103,6 +1414,15 @@
       <h2 id="modal-title"></h2>
       <div id="modal-content"></div>
       
+      <!-- Work Plan Section (for deliverables with subtasks) -->
+      <div class="work-plan-section" id="work-plan-section" style="display: none;">
+        <div class="work-plan-title">
+          📋 Work Plan
+          <span class="work-plan-progress" id="work-plan-progress"></span>
+        </div>
+        <div class="work-plan-list" id="work-plan-list"></div>
+      </div>
+      
       <!-- Notes Section -->
       <div class="field-label">Notes</div>
       <textarea class="edit-field" id="notes-field" placeholder="Add notes..."></textarea>
@@ -1509,9 +1829,11 @@
       document.getElementById('days-until').textContent = 
         daysUntil > 0 ? daysUntil : (daysUntil === 0 ? 'TODAY!' : `Day ${Math.abs(daysUntil)}`);
       
-      const complete = data.tasks.filter(t => t.status === 'complete').length;
+      // Count only main tasks (not subtasks) for primary stats
+      const mainTasks = data.tasks.filter(t => !t.parent);
+      const complete = mainTasks.filter(t => t.status === 'complete').length;
       document.getElementById('tasks-complete').textContent = complete;
-      document.getElementById('tasks-total').textContent = data.tasks.length;
+      document.getElementById('tasks-total').textContent = mainTasks.length;
     }
     
     function renderTimeline() {
@@ -1558,6 +1880,99 @@
       return filtered;
     }
     
+    function getSubtaskProgress(task) {
+      if (!task.subtasks || task.subtasks.length === 0) return null;
+      
+      const subtasks = task.subtasks.map(id => data.tasks.find(t => t.id === id)).filter(Boolean);
+      const completed = subtasks.filter(st => st.status === 'complete').length;
+      const total = subtasks.length;
+      
+      return { completed, total, subtasks };
+    }
+    
+    function hasOverdueSubtask(task) {
+      const progress = getSubtaskProgress(task);
+      if (!progress) return false;
+      
+      const today = getToday();
+      return progress.subtasks.some(st => 
+        st.status !== 'complete' && st.dueDate && st.dueDate < today
+      );
+    }
+    
+    function renderProgressRing(completed, total) {
+      const pct = total > 0 ? (completed / total) * 100 : 0;
+      const radius = 10;
+      const circumference = 2 * Math.PI * radius;
+      const offset = circumference - (pct / 100) * circumference;
+      
+      return `
+        <div class="mini-progress-ring" title="${completed}/${total} complete">
+          <svg width="28" height="28" viewBox="0 0 28 28">
+            <circle class="ring-bg" cx="14" cy="14" r="${radius}" />
+            <circle class="ring-progress" cx="14" cy="14" r="${radius}" 
+                    stroke-dasharray="${circumference}" 
+                    stroke-dashoffset="${offset}" />
+          </svg>
+        </div>
+      `;
+    }
+    
+    function renderSubtaskChips(task) {
+      const progress = getSubtaskProgress(task);
+      if (!progress) return '';
+      
+      const today = getToday();
+      
+      return `
+        <div class="subtasks-container" id="subtasks-${task.id}">
+          <div class="subtasks-toggle" onclick="event.stopPropagation(); toggleSubtasks('${task.id}');">
+            <span class="subtasks-toggle-icon">▶</span>
+            <span>Work Plan (${progress.completed}/${progress.total})</span>
+          </div>
+          <div class="subtasks-list">
+            ${progress.subtasks.map(st => {
+              const isOverdue = st.status !== 'complete' && st.dueDate && st.dueDate < today;
+              return `
+                <div class="subtask-chip ${st.status} ${isOverdue ? 'overdue' : ''}" 
+                     onclick="event.stopPropagation(); toggleSubtaskStatus('${st.id}');"
+                     title="${st.notes || st.title}">
+                  <span class="subtask-checkbox"></span>
+                  <span>${st.title}</span>
+                  ${st.dueDate ? `<span class="subtask-due">${formatDate(st.dueDate)}</span>` : ''}
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+    }
+    
+    function toggleSubtasks(taskId) {
+      const container = document.getElementById(`subtasks-${taskId}`);
+      if (container) {
+        container.classList.toggle('expanded');
+      }
+    }
+    
+    function toggleSubtaskStatus(subtaskId) {
+      const subtask = data.tasks.find(t => t.id === subtaskId);
+      if (!subtask) return;
+      
+      // Cycle status
+      const statuses = ['pending', 'in-progress', 'complete'];
+      const currentIdx = statuses.indexOf(subtask.status);
+      subtask.status = statuses[(currentIdx + 1) % statuses.length];
+      
+      // Save to local storage
+      const taskLocal = getTaskLocalData(subtaskId);
+      taskLocal.status = subtask.status;
+      saveLocalData();
+      
+      // Re-render
+      render();
+    }
+    
     function renderTasks() {
       const groupsEl = document.getElementById('task-groups');
       const today = getToday();
@@ -1565,7 +1980,8 @@
       let html = '';
       
       data.phases.forEach(phase => {
-        const phaseTasks = filterTasks(data.tasks.filter(t => t.phase === phase.id));
+        // Filter out subtasks from main list, only show parent tasks
+        const phaseTasks = filterTasks(data.tasks.filter(t => t.phase === phase.id && !t.parent));
         if (phaseTasks.length === 0) return;
         
         html += `
@@ -1580,6 +1996,9 @@
                 const isOverdue = task.dueDate && task.dueDate < today && task.status !== 'complete';
                 const catInfo = getCategoryInfo(task.category);
                 const subName = getSubcategoryName(task.category, task.subcategory);
+                const progress = getSubtaskProgress(task);
+                const isBlocked = hasOverdueSubtask(task);
+                
                 return `
                   <div class="task-card ${task.status} ${isOverdue ? 'overdue' : ''}" 
                        onclick="openTask('${task.id}')"
@@ -1589,10 +2008,16 @@
                         ${catInfo.icon} ${catInfo.name}
                       </span>
                       ${subName ? `<span class="task-subcategory">${subName}</span>` : ''}
+                      ${isBlocked ? '<span class="blocked-badge">⚠ Blocked</span>' : ''}
                     </div>
-                    <div class="task-header">
-                      <span class="task-title">${task.title}</span>
-                      <span class="task-type ${task.type}">${task.type}</span>
+                    <div class="task-header deliverable-header">
+                      <div class="deliverable-info">
+                        <span class="task-title">${task.title}</span>
+                      </div>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        ${progress ? renderProgressRing(progress.completed, progress.total) : ''}
+                        <span class="task-type ${task.type}">${task.type}</span>
+                      </div>
                     </div>
                     <div class="task-meta">
                       <span class="status ${task.status}">
@@ -1603,6 +2028,7 @@
                       <span>Owner: ${task.owner}</span>
                     </div>
                     ${task.notes ? `<div class="task-notes">${task.notes}</div>` : ''}
+                    ${renderSubtaskChips(task)}
                   </div>
                 `;
               }).join('')}
@@ -1638,11 +2064,13 @@
       } else {
         todayEl.innerHTML = urgent.map(t => {
           const catInfo = getCategoryInfo(t.category);
+          const parentTask = t.parent ? data.tasks.find(p => p.id === t.parent) : null;
           return `
             <div class="focus-item urgent" style="border-left-color: ${catInfo.color};">
               <span class="task-category" style="background: ${catInfo.color}22; color: ${catInfo.color}; font-size: 10px; padding: 1px 6px; margin-bottom: 4px; display: inline-block;">
                 ${catInfo.icon} ${catInfo.name}
               </span>
+              ${parentTask ? `<div style="font-size: 10px; color: var(--text-muted); margin-bottom: 2px;">↳ ${parentTask.title}</div>` : ''}
               <div><strong>${t.title}</strong></div>
               <div class="countdown">${t.dueDate === today ? 'Due today' : 'Overdue: ' + formatDate(t.dueDate)}</div>
             </div>
@@ -1655,11 +2083,13 @@
       } else {
         upcomingEl.innerHTML = upcoming.map(t => {
           const catInfo = getCategoryInfo(t.category);
+          const parentTask = t.parent ? data.tasks.find(p => p.id === t.parent) : null;
           return `
             <div class="focus-item soon" style="border-left-color: ${catInfo.color};">
               <span class="task-category" style="background: ${catInfo.color}22; color: ${catInfo.color}; font-size: 10px; padding: 1px 6px; margin-bottom: 4px; display: inline-block;">
                 ${catInfo.icon} ${catInfo.name}
               </span>
+              ${parentTask ? `<div style="font-size: 10px; color: var(--text-muted); margin-bottom: 2px;">↳ ${parentTask.title}</div>` : ''}
               <div><strong>${t.title}</strong></div>
               <div class="countdown">${formatDate(t.dueDate)} (${daysBetween(today, t.dueDate)} days)</div>
             </div>
@@ -1753,10 +2183,70 @@
       // Set default date for new message
       document.getElementById('message-date').value = getToday();
       
+      // Render Work Plan section for deliverables with subtasks
+      renderWorkPlan(selectedTask);
+      
       // Reset accordion state
       document.getElementById('messages-accordion').classList.remove('open');
       
       document.getElementById('modal').classList.add('open');
+    }
+    
+    function renderWorkPlan(task) {
+      const section = document.getElementById('work-plan-section');
+      const list = document.getElementById('work-plan-list');
+      const progressEl = document.getElementById('work-plan-progress');
+      
+      const progress = getSubtaskProgress(task);
+      
+      if (!progress) {
+        section.style.display = 'none';
+        return;
+      }
+      
+      section.style.display = 'block';
+      progressEl.textContent = `(${progress.completed}/${progress.total} complete)`;
+      
+      const today = getToday();
+      
+      list.innerHTML = progress.subtasks.map(st => {
+        const isOverdue = st.status !== 'complete' && st.dueDate && st.dueDate < today;
+        const daysLeft = st.dueDate ? daysBetween(today, st.dueDate) : null;
+        
+        return `
+          <div class="work-plan-item ${st.status} ${isOverdue ? 'overdue' : ''}" 
+               onclick="toggleWorkPlanItem('${st.id}')">
+            <div class="work-plan-checkbox"></div>
+            <div class="work-plan-content">
+              <div class="work-plan-item-title">${escapeHtml(st.title)}</div>
+              <div class="work-plan-item-meta">
+                ${st.dueDate ? `<span class="due-date">${isOverdue ? '⚠ Overdue: ' : 'Due: '}${formatDate(st.dueDate)}${!isOverdue && daysLeft !== null && daysLeft >= 0 ? ` (${daysLeft}d)` : ''}</span>` : ''}
+                <span class="status ${st.status}"><span class="status-dot"></span> ${st.status.replace('-', ' ')}</span>
+              </div>
+              ${st.notes ? `<div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">${escapeHtml(st.notes)}</div>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+    
+    function toggleWorkPlanItem(subtaskId) {
+      const subtask = data.tasks.find(t => t.id === subtaskId);
+      if (!subtask) return;
+      
+      // Cycle status
+      const statuses = ['pending', 'in-progress', 'complete'];
+      const currentIdx = statuses.indexOf(subtask.status);
+      subtask.status = statuses[(currentIdx + 1) % statuses.length];
+      
+      // Save to local storage
+      const taskLocal = getTaskLocalData(subtaskId);
+      taskLocal.status = subtask.status;
+      saveLocalData();
+      
+      // Re-render the work plan and main task list
+      renderWorkPlan(selectedTask);
+      render();
     }
     
     function renderAttachments(attachments) {

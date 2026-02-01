@@ -27,6 +27,20 @@
         { "id": "systems", "name": "Systems/CRM" },
         { "id": "leadership", "name": "Leadership" }
       ]
+    },
+    {
+      "id": "avila",
+      "name": "Avila University",
+      "color": "#8b5cf6",
+      "icon": "🎓",
+      "subcategories": [
+        { "id": "spring-1", "name": "Spring 1" },
+        { "id": "spring-2", "name": "Spring 2" },
+        { "id": "summer-1", "name": "Summer 1" },
+        { "id": "summer-2", "name": "Summer 2" },
+        { "id": "fall-1", "name": "Fall 1" },
+        { "id": "fall-2", "name": "Fall 2" }
+      ]
     }
   ],
   "phases": [
@@ -72,6 +86,22 @@
       "category": "special-strong",
       "subcategory": "onboarding",
       "notes": "Signed with Adaptive Fitness LLC"
+    },
+    {
+      "id": "t28",
+      "title": "Call Window World - Order 2 replacement windows",
+      "phase": "pre-start",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-02-02",
+      "dependencies": [],
+      "category": "dallas-move",
+      "notes": "📞 1-800-639-8946 (1-800-WINDOWWORLD) | Window 1: S/N 126-4-21270, 48 7/8 x 17 1/4 | Window 2: S/N 126-4-20369, 35 3/4 x 53 1/2 | PO: B261 | Original install: 03/14/11",
+      "attachments": [
+        {"name": "Window 1 - S/N 126-4-21270", "path": "attachments/window-1-sn-126-4-21270.jpg"},
+        {"name": "Window 2 - S/N 126-4-20369", "path": "attachments/window-2-sn-126-4-20369.jpg"}
+      ]
     },
     {
       "id": "t2",
@@ -405,6 +435,84 @@
       "category": "special-strong",
       "subcategory": "90-day-plan",
       "notes": "End of initial 90-day period"
+    },
+    {
+      "id": "avila-sp1-grades",
+      "title": "🎓 Spring 1 - Grades Due",
+      "phase": "phase-1",
+      "type": "milestone",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-03-10",
+      "dependencies": [],
+      "category": "avila",
+      "subcategory": "spring-1",
+      "notes": "Term ended Mar 7. Submit final grades."
+    },
+    {
+      "id": "avila-sp2-syllabus",
+      "title": "🎓 Spring 2 - Course Published & Syllabus Due",
+      "phase": "phase-1",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-03-02",
+      "dependencies": [],
+      "category": "avila",
+      "subcategory": "spring-2",
+      "notes": "Course must be published and syllabus uploaded before term starts Mar 16."
+    },
+    {
+      "id": "avila-sp2-start",
+      "title": "🎓 Spring 2 - Term Starts",
+      "phase": "phase-1",
+      "type": "milestone",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-03-16",
+      "dependencies": ["avila-sp2-syllabus"],
+      "category": "avila",
+      "subcategory": "spring-2",
+      "notes": "Spring 2 term begins. Runs through May 9."
+    },
+    {
+      "id": "avila-su1-syllabus",
+      "title": "🎓 Summer 1 - Course Published & Syllabus Due",
+      "phase": "phase-2",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-04-27",
+      "dependencies": [],
+      "category": "avila",
+      "subcategory": "summer-1",
+      "notes": "Course must be published and syllabus uploaded before term starts May 11."
+    },
+    {
+      "id": "avila-sp2-grades",
+      "title": "🎓 Spring 2 - Grades Due",
+      "phase": "phase-3",
+      "type": "milestone",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-05-12",
+      "dependencies": [],
+      "category": "avila",
+      "subcategory": "spring-2",
+      "notes": "Term ended May 9. Submit final grades."
+    },
+    {
+      "id": "avila-su1-start",
+      "title": "🎓 Summer 1 - Term Starts",
+      "phase": "phase-3",
+      "type": "milestone",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-05-11",
+      "dependencies": ["avila-su1-syllabus"],
+      "category": "avila",
+      "subcategory": "summer-1",
+      "notes": "Summer 1 term begins. Runs through Jul 4."
     }
   ],
   "contacts": [

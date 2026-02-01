@@ -778,6 +778,108 @@
       border-radius: 10px;
       font-size: 11px;
     }
+    
+    /* Attachments */
+    .attachments-section {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    
+    .attachments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+    
+    .attachment-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+    
+    .attachment-item img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    
+    .attachment-item img:hover {
+      opacity: 0.8;
+    }
+    
+    .attachment-remove {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background: var(--danger);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      font-size: 12px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .attachment-name {
+      padding: 6px;
+      font-size: 11px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .attachment-empty {
+      color: var(--text-muted);
+      font-size: 13px;
+      padding: 12px;
+      text-align: center;
+      background: var(--bg);
+      border-radius: 8px;
+    }
+    
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+    
+    .lightbox.open {
+      display: flex;
+    }
+    
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 36px;
+      cursor: pointer;
+    }
 
     @media (max-width: 600px) {
       .add-contact-form {
@@ -989,6 +1091,12 @@
     </div>
   </div>
 
+  <!-- Lightbox for full-size images -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close">&times;</button>
+    <img id="lightbox-img" src="" alt="Attachment">
+  </div>
+
   <div class="modal-overlay" id="modal">
     <div class="modal">
       <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -998,6 +1106,12 @@
       <!-- Notes Section -->
       <div class="field-label">Notes</div>
       <textarea class="edit-field" id="notes-field" placeholder="Add notes..."></textarea>
+      
+      <!-- Attachments Section -->
+      <div class="attachments-section">
+        <div class="field-label">📎 Attachments</div>
+        <div id="attachments-list"></div>
+      </div>
       
       <!-- Contacts Section -->
       <div class="contacts-section">
@@ -1100,8 +1214,13 @@
           notes: '',
           contacts: [],
           messages: [],
+          attachments: [],
           status: null
         };
+      }
+      // Ensure attachments array exists for older data
+      if (!localData[taskId].attachments) {
+        localData[taskId].attachments = [];
       }
       return localData[taskId];
     }
@@ -1615,6 +1734,16 @@
       const localNotes = taskLocal.notes || '';
       document.getElementById('notes-field').value = localNotes || baseNotes;
       
+      // Render attachments (merge from data.json and localStorage, respecting hidden)
+      const baseAttachments = (selectedTask.attachments || []).filter(a => 
+        !(taskLocal.hiddenAttachments || []).includes(a.path)
+      );
+      const localAttachments = taskLocal.attachments || [];
+      // Combine, avoiding duplicates by path
+      const existingPaths = new Set(baseAttachments.map(a => a.path));
+      const mergedAttachments = [...baseAttachments, ...localAttachments.filter(a => !existingPaths.has(a.path))];
+      renderAttachments(mergedAttachments);
+      
       // Render contacts
       renderContacts(taskLocal.contacts || []);
       
@@ -1628,6 +1757,120 @@
       document.getElementById('messages-accordion').classList.remove('open');
       
       document.getElementById('modal').classList.add('open');
+    }
+    
+    function renderAttachments(attachments) {
+      const container = document.getElementById('attachments-list');
+      
+      let html = '';
+      
+      if (attachments && attachments.length > 0) {
+        html += `<div class="attachments-grid">
+          ${attachments.map((att, idx) => `
+            <div class="attachment-item">
+              <img src="${escapeHtml(att.path)}" alt="${escapeHtml(att.name || 'Attachment')}" 
+                   onclick="openLightbox('${escapeHtml(att.path)}')" 
+                   onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%23334155%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 text-anchor=%22middle%22 fill=%22%2394a3b8%22 font-size=%2212%22>Error</text></svg>'">
+              <button class="attachment-remove" onclick="removeAttachment(${idx})">&times;</button>
+              <div class="attachment-name">${escapeHtml(att.name || att.path.split('/').pop())}</div>
+            </div>
+          `).join('')}
+        </div>`;
+      } else {
+        html += '<div class="attachment-empty">No attachments</div>';
+      }
+      
+      // Add attachment form
+      html += `
+        <div class="add-attachment-form" style="margin-top: 12px;">
+          <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+            <input type="text" id="attachment-name" placeholder="Name (optional)" 
+                   style="flex: 1; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); padding: 8px; font-size: 13px;">
+            <input type="text" id="attachment-path" placeholder="Image URL or path" 
+                   style="flex: 2; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); padding: 8px; font-size: 13px;">
+            <button class="btn btn-primary btn-small" onclick="addAttachment()">+ Add</button>
+          </div>
+          <div style="font-size: 11px; color: var(--text-muted);">
+            Paste an image URL or relative path (e.g., attachments/photo.jpg)
+          </div>
+        </div>`;
+      
+      container.innerHTML = html;
+    }
+    
+    function addAttachment() {
+      if (!selectedTask) return;
+      
+      const name = document.getElementById('attachment-name').value.trim();
+      const path = document.getElementById('attachment-path').value.trim();
+      
+      if (!path) {
+        alert('Please enter an image URL or path');
+        return;
+      }
+      
+      const taskLocal = getTaskLocalData(selectedTask.id);
+      if (!taskLocal.attachments) taskLocal.attachments = [];
+      
+      taskLocal.attachments.push({ 
+        name: name || path.split('/').pop(), 
+        path: path 
+      });
+      saveLocalData();
+      
+      // Clear inputs
+      document.getElementById('attachment-name').value = '';
+      document.getElementById('attachment-path').value = '';
+      
+      renderAttachments(taskLocal.attachments);
+    }
+    
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    
+    function removeAttachment(idx) {
+      if (!selectedTask) return;
+      
+      // Get merged attachments (same logic as rendering)
+      const baseAttachments = selectedTask.attachments || [];
+      const taskLocal = getTaskLocalData(selectedTask.id);
+      const localAttachments = taskLocal.attachments || [];
+      const existingPaths = new Set(baseAttachments.map(a => a.path));
+      const mergedAttachments = [...baseAttachments, ...localAttachments.filter(a => !existingPaths.has(a.path))];
+      
+      if (idx < 0 || idx >= mergedAttachments.length) return;
+      
+      const toRemove = mergedAttachments[idx];
+      
+      // If it's a base attachment (from data.json), track it as hidden
+      if (idx < baseAttachments.length) {
+        if (!taskLocal.hiddenAttachments) taskLocal.hiddenAttachments = [];
+        taskLocal.hiddenAttachments.push(toRemove.path);
+      } else {
+        // It's a local attachment, remove it directly
+        const localIdx = idx - baseAttachments.length;
+        if (taskLocal.attachments && taskLocal.attachments[localIdx] !== undefined) {
+          taskLocal.attachments.splice(localIdx, 1);
+        }
+      }
+      
+      saveLocalData();
+      
+      // Re-render with updated data
+      const newBaseAttachments = baseAttachments.filter(a => 
+        !(taskLocal.hiddenAttachments || []).includes(a.path)
+      );
+      const newLocalAttachments = taskLocal.attachments || [];
+      const newExistingPaths = new Set(newBaseAttachments.map(a => a.path));
+      const newMergedAttachments = [...newBaseAttachments, ...newLocalAttachments.filter(a => !newExistingPaths.has(a.path))];
+      
+      renderAttachments(newMergedAttachments);
     }
     
     function renderContacts(contacts) {

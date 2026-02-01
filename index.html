@@ -727,6 +727,97 @@
         flex-direction: column;
       }
     }
+    
+    /* Header actions */
+    .header-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    
+    /* Sync status */
+    .sync-status {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-left: 8px;
+    }
+    
+    .sync-status.syncing {
+      color: var(--warning);
+    }
+    
+    .sync-status.success {
+      color: var(--success);
+    }
+    
+    .sync-status.error {
+      color: var(--danger);
+    }
+    
+    /* Settings modal */
+    .settings-field {
+      margin-bottom: 16px;
+    }
+    
+    .settings-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    
+    .settings-field input {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      padding: 10px;
+      font-size: 14px;
+    }
+    
+    .settings-field input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    
+    .settings-help {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+    
+    .settings-help a {
+      color: var(--accent);
+    }
+    
+    .token-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    
+    .token-status.valid {
+      color: var(--success);
+    }
+    
+    .token-status.invalid {
+      color: var(--danger);
+    }
+    
+    /* Last sync indicator */
+    .last-sync {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: right;
+      margin-top: 4px;
+    }
   </style>
 </head>
 <body>
@@ -735,6 +826,12 @@
       <div>
         <h1>🎯 Special Strong - 90 Day Plan</h1>
         <div class="subtitle">VP of Sales & Marketing | Start: Feb 23, 2026</div>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-primary" onclick="syncToGitHub()" id="sync-btn">
+          <span id="sync-icon">⬆️</span> Sync
+        </button>
+        <button class="btn" style="background: var(--surface-hover);" onclick="openSettings()">⚙️</button>
       </div>
       <div class="stats">
         <div class="stat">
@@ -797,6 +894,36 @@
     </div>
   </div>
   
+  <!-- Settings Modal -->
+  <div class="modal-overlay" id="settings-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeSettings()">&times;</button>
+      <h2>⚙️ Settings</h2>
+      
+      <div class="settings-field">
+        <label>GitHub Personal Access Token</label>
+        <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxx">
+        <div class="settings-help">
+          Required for syncing edits across devices.<br>
+          <a href="https://github.com/settings/tokens/new?description=90-Day-Plan-Sync&scopes=repo" target="_blank">Create a token</a> with <strong>repo</strong> scope.
+        </div>
+        <div class="token-status" id="token-status"></div>
+      </div>
+      
+      <div class="settings-field">
+        <label>Repository</label>
+        <input type="text" id="github-repo" value="ADI2D/special-strong-90day" readonly style="opacity: 0.7;">
+      </div>
+      
+      <div class="last-sync" id="last-sync-display"></div>
+      
+      <div class="modal-actions">
+        <button class="btn btn-primary" onclick="saveSettings()">Save Settings</button>
+        <button class="btn" style="background: var(--surface-hover);" onclick="testToken()">Test Connection</button>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal">
     <div class="modal">
       <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -862,6 +989,23 @@
     let localData = {}; // For storing edits in localStorage
     
     const STORAGE_KEY = 'special-strong-90day-local';
+    const SETTINGS_KEY = 'special-strong-90day-settings';
+    const GITHUB_REPO = 'ADI2D/special-strong-90day';
+    const DATA_FILE = 'data.json';
+    
+    // Settings management
+    function getSettings() {
+      try {
+        const stored = localStorage.getItem(SETTINGS_KEY);
+        return stored ? JSON.parse(stored) : {};
+      } catch (e) {
+        return {};
+      }
+    }
+    
+    function saveSettingsToStorage(settings) {
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+    }
     
     function loadLocalData() {
       try {
@@ -897,19 +1041,40 @@
     
     async function loadData() {
       loadLocalData();
+      updateLastSyncDisplay();
+      
       try {
-        const resp = await fetch('data.json');
+        // Try to fetch with cache-busting
+        const resp = await fetch('data.json?t=' + Date.now());
         data = await resp.json();
         
-        // Merge local status overrides
+        // Apply userData from data.json if present (synced data)
+        if (data.userData) {
+          // Merge remote userData into localData (remote wins for conflicts)
+          Object.keys(data.userData).forEach(taskId => {
+            if (!localData[taskId]) {
+              localData[taskId] = data.userData[taskId];
+            } else {
+              // Merge: remote data takes precedence but keep local additions
+              const remote = data.userData[taskId];
+              const local = localData[taskId];
+              localData[taskId] = {
+                notes: remote.notes || local.notes,
+                contacts: remote.contacts || local.contacts || [],
+                messages: remote.messages || local.messages || [],
+                status: remote.status || local.status
+              };
+            }
+          });
+          saveLocalData();
+        }
+        
+        // Apply local data to tasks
         data.tasks.forEach(task => {
           const local = localData[task.id];
-          if (local && local.status) {
-            task.status = local.status;
-          }
-          // Merge local notes with base notes
-          if (local && local.notes) {
-            task.localNotes = local.notes;
+          if (local) {
+            if (local.status) task.status = local.status;
+            if (local.notes) task.localNotes = local.notes;
           }
         });
         
@@ -918,6 +1083,155 @@
         console.error('Failed to load data:', e);
         document.getElementById('task-groups').innerHTML = 
           '<div class="empty-state">Failed to load data.json</div>';
+      }
+    }
+    
+    // Settings Modal
+    function openSettings() {
+      const settings = getSettings();
+      document.getElementById('github-token').value = settings.token || '';
+      document.getElementById('settings-modal').classList.add('open');
+      updateLastSyncDisplay();
+    }
+    
+    function closeSettings() {
+      document.getElementById('settings-modal').classList.remove('open');
+    }
+    
+    function saveSettings() {
+      const token = document.getElementById('github-token').value.trim();
+      saveSettingsToStorage({ token, lastSync: getSettings().lastSync });
+      alert('Settings saved!');
+      closeSettings();
+    }
+    
+    async function testToken() {
+      const token = document.getElementById('github-token').value.trim();
+      const statusEl = document.getElementById('token-status');
+      
+      if (!token) {
+        statusEl.className = 'token-status invalid';
+        statusEl.textContent = '❌ No token entered';
+        return;
+      }
+      
+      statusEl.className = 'token-status';
+      statusEl.textContent = '⏳ Testing...';
+      
+      try {
+        const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}`, {
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+        
+        if (resp.ok) {
+          const data = await resp.json();
+          if (data.permissions && data.permissions.push) {
+            statusEl.className = 'token-status valid';
+            statusEl.textContent = '✅ Connected with write access';
+          } else {
+            statusEl.className = 'token-status invalid';
+            statusEl.textContent = '⚠️ Connected but no write access';
+          }
+        } else {
+          statusEl.className = 'token-status invalid';
+          statusEl.textContent = '❌ Invalid token or no repo access';
+        }
+      } catch (e) {
+        statusEl.className = 'token-status invalid';
+        statusEl.textContent = '❌ Connection failed';
+      }
+    }
+    
+    function updateLastSyncDisplay() {
+      const settings = getSettings();
+      const el = document.getElementById('last-sync-display');
+      if (settings.lastSync) {
+        const date = new Date(settings.lastSync);
+        el.textContent = `Last synced: ${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+      } else {
+        el.textContent = 'Never synced';
+      }
+    }
+    
+    // GitHub Sync
+    async function syncToGitHub() {
+      const settings = getSettings();
+      const token = settings.token;
+      
+      if (!token) {
+        openSettings();
+        alert('Please add your GitHub token first');
+        return;
+      }
+      
+      const syncBtn = document.getElementById('sync-btn');
+      const syncIcon = document.getElementById('sync-icon');
+      syncBtn.disabled = true;
+      syncIcon.textContent = '🔄';
+      
+      try {
+        // Get current file SHA (needed for update)
+        const fileResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${DATA_FILE}`, {
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+        
+        if (!fileResp.ok) {
+          throw new Error('Failed to get current file');
+        }
+        
+        const fileData = await fileResp.json();
+        const currentSha = fileData.sha;
+        
+        // Decode current content
+        const currentContent = JSON.parse(atob(fileData.content));
+        
+        // Merge localData into userData
+        currentContent.userData = localData;
+        
+        // Encode new content
+        const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(currentContent, null, 2))));
+        
+        // Update file
+        const updateResp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${DATA_FILE}`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: `Sync user data - ${new Date().toISOString()}`,
+            content: newContent,
+            sha: currentSha
+          })
+        });
+        
+        if (!updateResp.ok) {
+          const err = await updateResp.json();
+          throw new Error(err.message || 'Failed to update file');
+        }
+        
+        // Update last sync time
+        settings.lastSync = Date.now();
+        saveSettingsToStorage(settings);
+        updateLastSyncDisplay();
+        
+        syncIcon.textContent = '✅';
+        setTimeout(() => { syncIcon.textContent = '⬆️'; }, 2000);
+        
+      } catch (e) {
+        console.error('Sync failed:', e);
+        alert('Sync failed: ' + e.message);
+        syncIcon.textContent = '❌';
+        setTimeout(() => { syncIcon.textContent = '⬆️'; }, 2000);
+      } finally {
+        syncBtn.disabled = false;
       }
     }
     
@@ -1322,6 +1636,10 @@
     // Close modal on overlay click
     document.getElementById('modal').addEventListener('click', (e) => {
       if (e.target.id === 'modal') closeModal();
+    });
+    
+    document.getElementById('settings-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'settings-modal') closeSettings();
     });
     
     // Load data on start

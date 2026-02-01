@@ -915,6 +915,7 @@
     
     <div class="filters">
       <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
       <button class="filter-btn" data-filter="milestone">Milestones</button>
       <button class="filter-btn" data-filter="deliverable">Deliverables</button>
       <button class="filter-btn" data-filter="task">Tasks</button>
@@ -1426,10 +1427,11 @@
       
       // Type/status filter
       if (currentFilter !== 'all') {
-        if (['milestone', 'deliverable', 'task', 'decision'].includes(currentFilter)) {
+        if (currentFilter === 'active') {
+          filtered = filtered.filter(t => t.status !== 'complete');
+        } else if (['milestone', 'deliverable', 'task', 'decision'].includes(currentFilter)) {
           filtered = filtered.filter(t => t.type === currentFilter);
-        }
-        if (['pending', 'in-progress', 'complete'].includes(currentFilter)) {
+        } else if (['pending', 'in-progress', 'complete'].includes(currentFilter)) {
           filtered = filtered.filter(t => t.status === currentFilter);
         }
       }

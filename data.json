@@ -8,6 +8,12 @@
              },
     "categories":  [
                        {
+                           "id":  "uncategorized",
+                           "name":  "Uncategorized",
+                           "color":  "#6b7280",
+                           "icon":  "📋"
+                       },
+                       {
                            "id":  "dallas-move",
                            "name":  "Dallas Move",
                            "color":  "#ec4899",
@@ -1055,7 +1061,7 @@
                       "owner":  "Alex",
                       "dueDate":  "2026-02-02",
                       "dependencies":  [],
-                      "category":  "dallas-move",
+                      "category":  "uncategorized",
                       "notes":  "Weekly unemployment certification | https://www.getkansasbenefits.gov"
                   },
                   {
@@ -1067,7 +1073,7 @@
                       "owner":  "Alex",
                       "dueDate":  "2026-02-09",
                       "dependencies":  [],
-                      "category":  "dallas-move",
+                      "category":  "uncategorized",
                       "notes":  "Weekly unemployment certification | https://www.getkansasbenefits.gov"
                   }
               ],

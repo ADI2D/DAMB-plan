@@ -11,25 +11,25 @@
       "id": "uncategorized",
       "name": "Uncategorized",
       "color": "#6b7280",
-      "icon": "ÃÂ°ÃÂÃÂÃÂ"
+      "icon": "📋"
     },
     {
       "id": "home",
       "name": "Home",
       "color": "#10b981",
-      "icon": "Ã°ÂÂÂ¡"
+      "icon": "🏡"
     },
     {
       "id": "dallas-move",
       "name": "Dallas Move",
       "color": "#ec4899",
-      "icon": "ÃÂ°ÃÂÃÂÃÂ "
+      "icon": "🏠"
     },
     {
       "id": "special-strong",
       "name": "Special Strong",
       "color": "#3b82f6",
-      "icon": "ÃÂ°ÃÂÃÂÃÂª",
+      "icon": "💪",
       "subcategories": [
         {
           "id": "onboarding",
@@ -65,7 +65,7 @@
       "id": "avila",
       "name": "Avila University",
       "color": "#8b5cf6",
-      "icon": "ÃÂ°ÃÂÃÂÃÂ",
+      "icon": "🎓",
       "subcategories": [
         {
           "id": "spring-1",

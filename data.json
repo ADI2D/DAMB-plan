@@ -221,14 +221,15 @@
                       "title":  "Get Upwork job posting access",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Daniel",
+                      "dueDate":  "2026-02-02",
                       "dependencies":  [
 
                                        ],
                       "category":  "special-strong",
                       "subcategory":  "admin",
-                      "notes":  "Request from Daniel"
+                      "notes":  "Confirmed access Feb 2. Can view and contact applicants."
                   },
                   {
                       "id":  "t7",
@@ -1075,6 +1076,86 @@
                       "dependencies":  [],
                       "category":  "uncategorized",
                       "notes":  "Weekly unemployment certification | https://www.kansasui.gov"
+                  },
+                  {
+                      "id":  "t29",
+                      "title":  "Call Eli at You Move Me - confirm truck ready Feb 9",
+                      "phase":  "pre-start",
+                      "type":  "task",
+                      "status":  "pending",
+                      "owner":  "Alex",
+                      "dueDate":  "2026-02-02",
+                      "dependencies":  [],
+                      "category":  "dallas-move",
+                      "notes":  "📞 Call Eli to confirm everything is set for the moving truck to arrive Feb 9th first thing. Make sure he has everything he needs."
+                  },
+                  {
+                      "id":  "t30",
+                      "title":  "Drop off Amazon returns",
+                      "phase":  "pre-start",
+                      "type":  "task",
+                      "status":  "pending",
+                      "owner":  "Alex",
+                      "dueDate":  "2026-02-02",
+                      "dependencies":  [],
+                      "category":  "uncategorized",
+                      "notes":  "📦 Amazon returns drop-off"
+                  },
+                  {
+                      "id":  "t31",
+                      "title":  "Review Upwork Paid Media candidates",
+                      "phase":  "pre-start",
+                      "type":  "task",
+                      "status":  "pending",
+                      "owner":  "Alex",
+                      "dueDate":  "2026-02-05",
+                      "priority":  "high",
+                      "dependencies":  ["t6"],
+                      "category":  "special-strong",
+                      "subcategory":  "funnel",
+                      "notes":  "Review 5 shortlisted + full 43 proposals for Paid Media & Funnel Optimization Expert role. URGENT: No active ads management = declining leads."
+                  },
+                  {
+                      "id":  "t32",
+                      "title":  "Send screening messages to top Upwork candidates",
+                      "phase":  "pre-start",
+                      "type":  "task",
+                      "status":  "pending",
+                      "owner":  "Alex",
+                      "dueDate":  "2026-02-06",
+                      "priority":  "high",
+                      "dependencies":  ["t31"],
+                      "category":  "special-strong",
+                      "subcategory":  "funnel",
+                      "notes":  "Send screening messages to top 5-7 candidates from review."
+                  },
+                  {
+                      "id":  "t33",
+                      "title":  "Paid Media contractor video interviews",
+                      "phase":  "pre-start",
+                      "type":  "task",
+                      "status":  "pending",
+                      "owner":  "Alex",
+                      "dueDate":  "2026-02-14",
+                      "priority":  "high",
+                      "dependencies":  ["t32"],
+                      "category":  "special-strong",
+                      "subcategory":  "funnel",
+                      "notes":  "Schedule 20-min video calls with top 3-4 candidates (Feb 10-14). Daniel, Dwayne, or others may join."
+                  },
+                  {
+                      "id":  "t34",
+                      "title":  "Present Paid Media contractor recommendation",
+                      "phase":  "pre-start",
+                      "type":  "decision",
+                      "status":  "pending",
+                      "owner":  "Alex",
+                      "dueDate":  "2026-02-14",
+                      "priority":  "high",
+                      "dependencies":  ["t33"],
+                      "category":  "special-strong",
+                      "subcategory":  "funnel",
+                      "notes":  "Present hiring recommendation to Daniel and Dwayne. Role: $100-150/hr, 5-10 hrs/week, managing franchise + corporate ad accounts."
                   }
               ],
     "contacts":  [
@@ -1208,7 +1289,7 @@
                                 "status":  "in-progress"
                             },
                      "t6":  {
-                                "notes":  "Need contractor access for marketing support hires",
+                                "notes":  "Confirmed access Feb 2. Paid Media & Funnel Optimization Expert role - 43 proposals, 5 shortlisted.",
                                 "contacts":  [
                                                  {
                                                      "name":  "Daniel Stein",
@@ -1221,9 +1302,14 @@
                                                      "date":  "2026-01-30",
                                                      "medium":  "email",
                                                      "text":  "Requested Upwork job posting access from Daniel"
+                                                 },
+                                                 {
+                                                     "date":  "2026-02-02",
+                                                     "medium":  "email",
+                                                     "text":  "Daniel confirmed Upwork access granted. Alex confirmed can view and contact applicants."
                                                  }
                                              ],
-                                "status":  "pending"
+                                "status":  "complete"
                             },
                      "t7":  {
                                 "notes":  "Critical for budget allocation model deliverable",

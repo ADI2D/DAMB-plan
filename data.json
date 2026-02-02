@@ -11,25 +11,25 @@
       "id": "uncategorized",
       "name": "Uncategorized",
       "color": "#6b7280",
-      "icon": "ð"
+      "icon": "Ã°ÂÂÂ"
     },
     {
       "id": "home",
       "name": "Home",
       "color": "#10b981",
-      "icon": "🏡"
+      "icon": "ð¡"
     },
     {
       "id": "dallas-move",
       "name": "Dallas Move",
       "color": "#ec4899",
-      "icon": "ð "
+      "icon": "Ã°ÂÂÂ "
     },
     {
       "id": "special-strong",
       "name": "Special Strong",
       "color": "#3b82f6",
-      "icon": "ðª",
+      "icon": "Ã°ÂÂÂª",
       "subcategories": [
         {
           "id": "onboarding",
@@ -65,7 +65,7 @@
       "id": "avila",
       "name": "Avila University",
       "color": "#8b5cf6",
-      "icon": "ð",
+      "icon": "Ã°ÂÂÂ",
       "subcategories": [
         {
           "id": "spring-1",
@@ -148,7 +148,7 @@
       "dueDate": "2026-02-02",
       "dependencies": [],
       "category": "dallas-move",
-      "notes": "ð 1-800-639-8946 (1-800-WINDOWWORLD) | Window 1: S/N 126-4-21270, 48 7/8 x 17 1/4 | Window 2: S/N 126-4-20369, 35 3/4 x 53 1/2 | PO: B261 | Original install: 03/14/11",
+      "notes": "Ã°ÂÂÂ 1-800-639-8946 (1-800-WINDOWWORLD) | Window 1: S/N 126-4-21270, 48 7/8 x 17 1/4 | Window 2: S/N 126-4-20369, 35 3/4 x 53 1/2 | PO: B261 | Original install: 03/14/11",
       "attachments": [
         {
           "name": "Window 1 - S/N 126-4-21270",
@@ -784,7 +784,7 @@
     },
     {
       "id": "t17",
-      "title": "End-to-end tracking (ad â trial â enrollment)",
+      "title": "End-to-end tracking (ad Ã¢ÂÂ trial Ã¢ÂÂ enrollment)",
       "phase": "phase-2",
       "type": "deliverable",
       "status": "pending",
@@ -843,7 +843,7 @@
       ],
       "category": "special-strong",
       "subcategory": "funnel",
-      "notes": "Q3 Bonus Deliverable C.1 - Traffic â close with benchmarks"
+      "notes": "Q3 Bonus Deliverable C.1 - Traffic Ã¢ÂÂ close with benchmarks"
     },
     {
       "id": "t21",
@@ -953,7 +953,7 @@
     },
     {
       "id": "avila-sp1-grades",
-      "title": "ð Spring 1 - Grades Due",
+      "title": "Ã°ÂÂÂ Spring 1 - Grades Due",
       "phase": "phase-1",
       "type": "milestone",
       "status": "pending",
@@ -966,7 +966,7 @@
     },
     {
       "id": "avila-sp2-syllabus",
-      "title": "ð Spring 2 - Course Published & Syllabus Due",
+      "title": "Ã°ÂÂÂ Spring 2 - Course Published & Syllabus Due",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -979,7 +979,7 @@
     },
     {
       "id": "avila-sp2-start",
-      "title": "ð Spring 2 - Term Starts",
+      "title": "Ã°ÂÂÂ Spring 2 - Term Starts",
       "phase": "phase-1",
       "type": "milestone",
       "status": "pending",
@@ -994,7 +994,7 @@
     },
     {
       "id": "avila-su1-syllabus",
-      "title": "ð Summer 1 - Course Published & Syllabus Due",
+      "title": "Ã°ÂÂÂ Summer 1 - Course Published & Syllabus Due",
       "phase": "phase-2",
       "type": "task",
       "status": "pending",
@@ -1007,7 +1007,7 @@
     },
     {
       "id": "avila-sp2-grades",
-      "title": "ð Spring 2 - Grades Due",
+      "title": "Ã°ÂÂÂ Spring 2 - Grades Due",
       "phase": "phase-3",
       "type": "milestone",
       "status": "pending",
@@ -1020,7 +1020,7 @@
     },
     {
       "id": "avila-su1-start",
-      "title": "ð Summer 1 - Term Starts",
+      "title": "Ã°ÂÂÂ Summer 1 - Term Starts",
       "phase": "phase-3",
       "type": "milestone",
       "status": "pending",
@@ -1067,7 +1067,7 @@
       "dueDate": "2026-02-02",
       "dependencies": [],
       "category": "dallas-move",
-      "notes": "ð Call Eli to confirm everything is set for the moving truck to arrive Feb 9th first thing. Make sure he has everything he needs."
+      "notes": "Ã°ÂÂÂ Call Eli to confirm everything is set for the moving truck to arrive Feb 9th first thing. Make sure he has everything he needs."
     },
     {
       "id": "t30",
@@ -1079,7 +1079,7 @@
       "dueDate": "2026-02-02",
       "dependencies": [],
       "category": "uncategorized",
-      "notes": "ð¦ Amazon returns drop-off"
+      "notes": "Ã°ÂÂÂ¦ Amazon returns drop-off"
     },
     {
       "id": "t31",
@@ -1177,20 +1177,22 @@
     },
     {
       "id": "friday-0227",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-02-27",
-      "dependencies": ["t9"],
+      "dependencies": [
+        "t9"
+      ],
       "category": "special-strong",
       "subcategory": "admin",
       "notes": "RECURRING FRIDAY: Submit by EOD. https://form.jotform.com/specialstrong/weekly-ownership-check-in"
     },
     {
       "id": "friday-0306",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1203,7 +1205,7 @@
     },
     {
       "id": "friday-0313",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1216,7 +1218,7 @@
     },
     {
       "id": "friday-0320",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1229,7 +1231,7 @@
     },
     {
       "id": "friday-0327",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-2",
       "type": "task",
       "status": "pending",
@@ -1242,7 +1244,7 @@
     },
     {
       "id": "friday-0403",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-2",
       "type": "task",
       "status": "pending",
@@ -1255,7 +1257,7 @@
     },
     {
       "id": "friday-0410",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-2",
       "type": "task",
       "status": "pending",
@@ -1268,7 +1270,7 @@
     },
     {
       "id": "friday-0417",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-2",
       "type": "task",
       "status": "pending",
@@ -1281,7 +1283,7 @@
     },
     {
       "id": "friday-0424",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-3",
       "type": "task",
       "status": "pending",
@@ -1294,7 +1296,7 @@
     },
     {
       "id": "friday-0501",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-3",
       "type": "task",
       "status": "pending",
@@ -1307,7 +1309,7 @@
     },
     {
       "id": "friday-0508",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-3",
       "type": "task",
       "status": "pending",
@@ -1320,7 +1322,7 @@
     },
     {
       "id": "friday-0515",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-3",
       "type": "task",
       "status": "pending",
@@ -1333,7 +1335,7 @@
     },
     {
       "id": "friday-0522",
-      "title": "📋 Weekly Ownership Check-In",
+      "title": "ð Weekly Ownership Check-In",
       "phase": "phase-3",
       "type": "task",
       "status": "pending",
@@ -1352,7 +1354,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-01",
-      "dependencies": ["t9"],
+      "dependencies": [
+        "t9"
+      ],
       "category": "special-strong",
       "subcategory": "leadership",
       "notes": "FROM INTERVIEW: Daniel said 'I think you two would work really well together.' Graham handles process/structure fixes. Started ~90 days ago. Key operational partner."
@@ -1365,7 +1369,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-01",
-      "dependencies": ["t9"],
+      "dependencies": [
+        "t9"
+      ],
       "category": "special-strong",
       "subcategory": "leadership",
       "notes": "FROM INTERVIEW: Leads franchise sales. Highest title authority on franchise side. Reports: Jeff Stokes, Craig Bohall."
@@ -1378,7 +1384,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-01",
-      "dependencies": ["t9"],
+      "dependencies": [
+        "t9"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "notes": "FROM 90-DAY PLAN: Submit leads and track response time. Feel the friction customers feel. Baseline data for speed-to-lead audit."
@@ -1391,7 +1399,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-02-28",
-      "dependencies": ["t9"],
+      "dependencies": [
+        "t9"
+      ],
       "category": "special-strong",
       "subcategory": "systems",
       "notes": "FROM 90-DAY PLAN: Categorize data as Gold (trustworthy), Silver (trend-based), or Bronze (broken). No delegation - need to know personally."
@@ -1404,7 +1414,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-24",
-      "dependencies": ["t9"],
+      "dependencies": [
+        "t9"
+      ],
       "category": "special-strong",
       "subcategory": "funnel",
       "notes": "FROM INTERVIEW: Options - rehire agency, bring in-house, or manage personally. Previous agency fired for poor management. If seat empty, Alex manages spend in 'safe mode' until filled."
@@ -1417,7 +1429,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-03-15",
-      "dependencies": ["t9"],
+      "dependencies": [
+        "t9"
+      ],
       "category": "special-strong",
       "subcategory": "leadership",
       "notes": "FROM INTERVIEW: Daniel said 'It would be amazing if you could just hand over our messy document and you can just fix it.' Titles don't make sense - executives ranked higher than chiefs. Daniel hates org charts."
@@ -1430,7 +1444,9 @@
       "status": "pending",
       "owner": "Alex",
       "dueDate": "2026-02-24",
-      "dependencies": ["t9"],
+      "dependencies": [
+        "t9"
+      ],
       "category": "special-strong",
       "subcategory": "systems",
       "notes": "FROM 90-DAY PLAN: Day 1 kickoff. Align definitions so scorecard isn't a debate. What counts as a lead? Show? Close?"
@@ -1542,9 +1558,7 @@
           "text": "Second session with Graham - lead scoring and follow-up sequences"
         }
       ],
-      "status": "pending",
-      "attachments": [],
-      "priority": 3
+      "status": "pending"
     },
     "t2": {
       "notes": "Moving truck scheduled. Storage unit secured in Dallas area.",
@@ -1639,41 +1653,34 @@
       "messages": [],
       "status": null
     },
-    "_taskOrder_pre-start": [
-      "t1",
-      "t28",
-      "t2",
-      "t3",
-      "t4",
-      "t5",
-      "t6",
-      "t7",
-      "t8",
-      "unemployment-0202",
-      "unemployment-0209"
-    ],
+    "_taskOrder_pre-start": {
+      "contacts": [],
+      "messages": []
+    },
     "t3": {
       "notes": "Melanie follows after truck",
       "contacts": [],
       "messages": [],
-      "attachments": [],
-      "status": null,
-      "priority": 3
+      "status": null
     },
     "unemployment-0209": {
       "notes": "Weekly unemployment certification | https://www.kansasui.gov",
       "contacts": [],
       "messages": [],
-      "attachments": [],
-      "status": "pending",
-      "priority": 3
+      "status": "pending"
     },
     "unemployment-0202": {
       "notes": "Weekly unemployment certification | https://www.kansasui.gov",
       "contacts": [],
       "messages": [],
+      "status": "complete"
+    },
+    "t29": {
+      "notes": "ð Call Eli to confirm everything is set for the moving truck to arrive Feb 9th first thing. Make sure he has everything he needs.\n\nLeft a message for Eli at 10:39 AM on January 2.",
+      "contacts": [],
+      "messages": [],
       "attachments": [],
-      "status": "complete",
+      "status": "in-progress",
       "priority": 3
     }
   }

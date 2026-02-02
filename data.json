@@ -1389,7 +1389,7 @@
       ],
       "category": "special-strong",
       "subcategory": "funnel",
-      "notes": "FROM 90-DAY PLAN: Submit leads and track response time. Feel the friction customers feel. Baseline data for speed-to-lead audit."
+      "notes": "FROM 90-DAY PLAN: Full secret shop 3-5 locations. Pre-start baseline in pre-secret-shop task. Continue post-start for additional data."
     },
     {
       "id": "interview-04",
@@ -1514,7 +1514,7 @@
       "dependencies": [],
       "category": "special-strong",
       "subcategory": "onboarding",
-      "notes": "BUCKET 2: Tech Training. Outgoing VP handover. Critical context transfer."
+      "notes": "BUCKET 2: Tech Training. Outgoing VP handover. Critical context transfer. SCHEDULE THIS WEEK."
     },
     {
       "id": "onb-06",
@@ -1721,6 +1721,86 @@
       "category": "special-strong",
       "subcategory": "onboarding",
       "notes": "COMPLETION: All onboarding buckets complete. Bonus released at start."
+    },
+    {
+      "id": "today-01",
+      "title": "Send follow-up email to Dwayne (sequencing recommendation)",
+      "phase": "pre-start",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-02-02",
+      "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "strategy",
+      "notes": "Recommend: hire first, build together. Individual accounts + Meta forms = 3x CPL improvement."
+    },
+    {
+      "id": "today-02",
+      "title": "Request core values/mission/vision doc from Daniel",
+      "phase": "pre-start",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-02-05",
+      "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "onboarding",
+      "notes": "Required for onb-04 (memorize and articulate). Cannot complete that task without this."
+    },
+    {
+      "id": "today-03",
+      "title": "Get clarification on Michael role/status",
+      "phase": "pre-start",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-02-05",
+      "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "admin",
+      "notes": "Open question from analysis email. Who is he? Using Julia Siwert email. Being replaced or supplemented?"
+    },
+    {
+      "id": "today-04",
+      "title": "Request SOPs/playbooks from Ov",
+      "phase": "pre-start",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-02-10",
+      "dependencies": [
+        "onb-05"
+      ],
+      "category": "special-strong",
+      "subcategory": "onboarding",
+      "notes": "From handover doc: Athlete Lead SOP, GO Playbook, Setter workflows, Marketing Playbook. Get during Ov meeting."
+    },
+    {
+      "id": "today-05",
+      "title": "Confirm Naovi bandwidth for training schedule",
+      "phase": "pre-start",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-02-05",
+      "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "admin",
+      "notes": "She owns 10+ setup/training items. Confirm she has capacity and agree on schedule."
+    },
+    {
+      "id": "pre-secret-shop",
+      "title": "Secret shop 2-3 franchise locations (pre-start baseline)",
+      "phase": "pre-start",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-02-15",
+      "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "funnel",
+      "notes": "Submit leads, track response time. Feel the friction. Baseline data before Day 1. Full secret shop (interview-03) continues post-start."
     }
   ],
   "contacts": [

@@ -1156,6 +1156,45 @@
                       "category":  "special-strong",
                       "subcategory":  "funnel",
                       "notes":  "Present hiring recommendation to Daniel and Dwayne. Role: $100-150/hr, 5-10 hrs/week, managing franchise + corporate ad accounts."
+                  },
+                  {
+                      "id":  "t35",
+                      "title":  "Meet Devaune Bohall (Culture and Care Leader)",
+                      "phase":  "phase-1",
+                      "type":  "task",
+                      "status":  "pending",
+                      "owner":  "Alex",
+                      "dueDate":  "2026-03-07",
+                      "dependencies":  ["t9"],
+                      "category":  "special-strong",
+                      "subcategory":  "leadership",
+                      "notes":  "Culture and Care Leader. Leads corporate prayer, connection rhythms, birthday/anniversary recognition, hardship care. Key relationship for understanding team culture."
+                  },
+                  {
+                      "id":  "t36",
+                      "title":  "Meet Misti Herring",
+                      "phase":  "phase-1",
+                      "type":  "task",
+                      "status":  "pending",
+                      "owner":  "Alex",
+                      "dueDate":  "2026-03-07",
+                      "dependencies":  ["t9"],
+                      "category":  "special-strong",
+                      "subcategory":  "leadership",
+                      "notes":  "Provided feedback that helped Daniel/Dwayne define and clarify office culture. Influential voice in the organization."
+                  },
+                  {
+                      "id":  "t37",
+                      "title":  "Weekly Ownership Check-In",
+                      "phase":  "phase-1",
+                      "type":  "task",
+                      "status":  "pending",
+                      "owner":  "Alex",
+                      "dueDate":  "2026-02-27",
+                      "dependencies":  ["t9"],
+                      "category":  "special-strong",
+                      "subcategory":  "admin",
+                      "notes":  "RECURRING: Due every Friday by EOD. 1-2 sentences per section, 5 min max. Submit: https://form.jotform.com/specialstrong/weekly-ownership-check-in | Sections: Top Win, Priorities At Risk, Decisions/Problems Owned, Primary Challenge, Support Needed, Spiritual Reflections (optional)"
                   }
               ],
     "contacts":  [

@@ -14,6 +14,12 @@
       "icon": "ð"
     },
     {
+      "id": "home",
+      "name": "Home",
+      "color": "#10b981",
+      "icon": "🏡"
+    },
+    {
       "id": "dallas-move",
       "name": "Dallas Move",
       "color": "#ec4899",

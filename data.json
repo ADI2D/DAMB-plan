@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "DAMB Plan",
     "role": "VP of Sales & Marketing",
@@ -127,7 +127,7 @@
   "tasks": [
     {
       "id": "t1",
-      "title": "SignEmploymentAgreement",
+      "title": "Sign Employment Agreement",
       "phase": "pre-start",
       "type": "milestone",
       "status": "complete",
@@ -140,7 +140,7 @@
     },
     {
       "id": "t28",
-      "title": "CallWindowWorld-Order2replacementwindows",
+      "title": "Call Window World - Order 2 replacement windows",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -162,7 +162,7 @@
     },
     {
       "id": "t2",
-      "title": "DallasRelocation-Household",
+      "title": "Dallas Relocation - Household",
       "phase": "pre-start",
       "type": "task",
       "status": "in-progress",
@@ -174,7 +174,7 @@
     },
     {
       "id": "t3",
-      "title": "DallasRelocation-Melanie",
+      "title": "Dallas Relocation - Melanie",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -188,7 +188,7 @@
     },
     {
       "id": "t4",
-      "title": "DeepdivewithJudah(SGParchitecture)",
+      "title": "Deep dive with Judah (SGP architecture)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -201,7 +201,7 @@
     },
     {
       "id": "t5",
-      "title": "Grahamonboardingsessions",
+      "title": "Graham onboarding sessions",
       "phase": "pre-start",
       "type": "task",
       "status": "in-progress",
@@ -214,7 +214,7 @@
     },
     {
       "id": "t6",
-      "title": "GetUpworkjobpostingaccess",
+      "title": "Get Upwork job posting access",
       "phase": "pre-start",
       "type": "task",
       "status": "complete",
@@ -227,7 +227,7 @@
     },
     {
       "id": "t7",
-      "title": "Requestfull2026MarketingBudget/P&L",
+      "title": "Request full 2026 Marketing Budget/P&L",
       "phase": "pre-start",
       "type": "decision",
       "status": "pending",
@@ -239,7 +239,7 @@
     },
     {
       "id": "t8",
-      "title": "GetaddedtoZoomcorporateaccount",
+      "title": "Get added to Zoom corporate account",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -251,7 +251,7 @@
     },
     {
       "id": "t9",
-      "title": "OFFICIALSTARTDATE",
+      "title": "OFFICIAL START DATE",
       "phase": "phase-1",
       "type": "milestone",
       "status": "pending",
@@ -267,7 +267,7 @@
     },
     {
       "id": "t10",
-      "title": "LeadFlowAudit",
+      "title": "Lead Flow Audit",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -283,7 +283,7 @@
     },
     {
       "id": "t11",
-      "title": "End-to-endgrowthstrategydocument",
+      "title": "End-to-end growth strategy document",
       "phase": "phase-1",
       "type": "deliverable",
       "status": "pending",
@@ -305,7 +305,7 @@
     },
     {
       "id": "t11-a",
-      "title": "Research&Discovery",
+      "title": "Research & Discovery",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -321,7 +321,7 @@
     },
     {
       "id": "t11-b",
-      "title": "DraftOutline",
+      "title": "Draft Outline",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -337,7 +337,7 @@
     },
     {
       "id": "t11-c",
-      "title": "StakeholderInput",
+      "title": "Stakeholder Input",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -353,7 +353,7 @@
     },
     {
       "id": "t11-d",
-      "title": "FirstDraft",
+      "title": "First Draft",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -369,7 +369,7 @@
     },
     {
       "id": "t11-e",
-      "title": "Review&Finalize",
+      "title": "Review & Finalize",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -385,7 +385,7 @@
     },
     {
       "id": "t12",
-      "title": "Athlete&franchisefunneldesign",
+      "title": "Athlete & franchise funnel design",
       "phase": "phase-1",
       "type": "deliverable",
       "status": "pending",
@@ -407,7 +407,7 @@
     },
     {
       "id": "t12-a",
-      "title": "CurrentStateMapping",
+      "title": "Current State Mapping",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -423,7 +423,7 @@
     },
     {
       "id": "t12-b",
-      "title": "FunnelArchitectureDesign",
+      "title": "Funnel Architecture Design",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -439,7 +439,7 @@
     },
     {
       "id": "t12-c",
-      "title": "StakeholderReview",
+      "title": "Stakeholder Review",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -455,7 +455,7 @@
     },
     {
       "id": "t12-d",
-      "title": "DesignRefinement",
+      "title": "Design Refinement",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -471,7 +471,7 @@
     },
     {
       "id": "t12-e",
-      "title": "FinalDocumentation",
+      "title": "Final Documentation",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -487,7 +487,7 @@
     },
     {
       "id": "t13",
-      "title": "Channelalignment(paid,SEO,social,remarketing)",
+      "title": "Channel alignment (paid, SEO, social, remarketing)",
       "phase": "phase-1",
       "type": "deliverable",
       "status": "pending",
@@ -509,7 +509,7 @@
     },
     {
       "id": "t13-a",
-      "title": "ChannelAudit",
+      "title": "Channel Audit",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -526,7 +526,7 @@
     },
     {
       "id": "t13-b",
-      "title": "PerformanceAnalysis",
+      "title": "Performance Analysis",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -542,7 +542,7 @@
     },
     {
       "id": "t13-c",
-      "title": "AlignmentStrategyDraft",
+      "title": "Alignment Strategy Draft",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -558,7 +558,7 @@
     },
     {
       "id": "t13-d",
-      "title": "Review&Finalize",
+      "title": "Review & Finalize",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -574,7 +574,7 @@
     },
     {
       "id": "t14",
-      "title": "Budgetallocationmodel",
+      "title": "Budget allocation model",
       "phase": "phase-1",
       "type": "deliverable",
       "status": "pending",
@@ -597,7 +597,7 @@
     },
     {
       "id": "t14-a",
-      "title": "HistoricalSpendAnalysis",
+      "title": "Historical Spend Analysis",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -614,7 +614,7 @@
     },
     {
       "id": "t14-b",
-      "title": "ROIModeling",
+      "title": "ROI Modeling",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -630,7 +630,7 @@
     },
     {
       "id": "t14-c",
-      "title": "AllocationFramework",
+      "title": "Allocation Framework",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -646,7 +646,7 @@
     },
     {
       "id": "t14-d",
-      "title": "StakeholderReview",
+      "title": "Stakeholder Review",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -662,7 +662,7 @@
     },
     {
       "id": "t14-e",
-      "title": "FinalModel",
+      "title": "Final Model",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -678,7 +678,7 @@
     },
     {
       "id": "t15",
-      "title": "90-dayexecutionroadmap",
+      "title": "90-day execution roadmap",
       "phase": "phase-1",
       "type": "deliverable",
       "status": "pending",
@@ -702,7 +702,7 @@
     },
     {
       "id": "t15-a",
-      "title": "CompileDeliverableOutputs",
+      "title": "Compile Deliverable Outputs",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -721,7 +721,7 @@
     },
     {
       "id": "t15-b",
-      "title": "Timeline&MilestoneMapping",
+      "title": "Timeline & Milestone Mapping",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -737,7 +737,7 @@
     },
     {
       "id": "t15-c",
-      "title": "ResourceAllocation",
+      "title": "Resource Allocation",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -753,7 +753,7 @@
     },
     {
       "id": "t15-d",
-      "title": "FinalRoadmap&Presentation",
+      "title": "Final Roadmap & Presentation",
       "phase": "phase-1",
       "type": "subtask",
       "status": "pending",
@@ -769,7 +769,7 @@
     },
     {
       "id": "t16",
-      "title": "AthleteSalesFunneldocumentation",
+      "title": "Athlete Sales Funnel documentation",
       "phase": "phase-2",
       "type": "deliverable",
       "status": "pending",
@@ -800,7 +800,7 @@
     },
     {
       "id": "t18",
-      "title": "Rebuiltpaidadvertisingframework",
+      "title": "Rebuilt paid advertising framework",
       "phase": "phase-2",
       "type": "deliverable",
       "status": "pending",
@@ -816,7 +816,7 @@
     },
     {
       "id": "t19",
-      "title": "CRM&SGPintegrations+reporting",
+      "title": "CRM & SGP integrations + reporting",
       "phase": "phase-2",
       "type": "deliverable",
       "status": "pending",
@@ -847,7 +847,7 @@
     },
     {
       "id": "t21",
-      "title": "Speedtoleadsystem(<5min)",
+      "title": "Speed to lead system (<5 min)",
       "phase": "phase-3",
       "type": "deliverable",
       "status": "pending",
@@ -863,7 +863,7 @@
     },
     {
       "id": "t22",
-      "title": "Automatedfollow-up&re-engagementworkflows",
+      "title": "Automated follow-up & re-engagement workflows",
       "phase": "phase-3",
       "type": "deliverable",
       "status": "pending",
@@ -878,7 +878,7 @@
     },
     {
       "id": "t23",
-      "title": "Athlete&franchiseremarketingstrategies",
+      "title": "Athlete & franchise remarketing strategies",
       "phase": "phase-3",
       "type": "deliverable",
       "status": "pending",
@@ -894,7 +894,7 @@
     },
     {
       "id": "t24",
-      "title": "Definedroles,KPIstructure,performancedashboards",
+      "title": "Defined roles, KPI structure, performance dashboards",
       "phase": "phase-3",
       "type": "deliverable",
       "status": "pending",
@@ -909,7 +909,7 @@
     },
     {
       "id": "t25",
-      "title": "Unifiedmarketingroadmap(cross-departmental)",
+      "title": "Unified marketing roadmap (cross-departmental)",
       "phase": "phase-3",
       "type": "deliverable",
       "status": "pending",
@@ -925,7 +925,7 @@
     },
     {
       "id": "t26",
-      "title": "Executiveleadershipapproval",
+      "title": "Executive leadership approval",
       "phase": "phase-3",
       "type": "decision",
       "status": "pending",
@@ -940,7 +940,7 @@
     },
     {
       "id": "t27",
-      "title": "90-DAYCHECKPOINT",
+      "title": "90-DAY CHECKPOINT",
       "phase": "phase-3",
       "type": "milestone",
       "status": "pending",
@@ -1035,7 +1035,7 @@
     },
     {
       "id": "unemployment-0202",
-      "title": "CompleteKansasunemploymentform",
+      "title": "Complete Kansas unemployment form",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1047,7 +1047,7 @@
     },
     {
       "id": "unemployment-0209",
-      "title": "CompleteKansasunemploymentform",
+      "title": "Complete Kansas unemployment form",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1059,7 +1059,7 @@
     },
     {
       "id": "t29",
-      "title": "CallEliatYouMoveMe-confirmtruckreadyFeb9",
+      "title": "Call Eli at You Move Me - confirm truck ready Feb 9",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1071,7 +1071,7 @@
     },
     {
       "id": "t30",
-      "title": "DropoffAmazonreturns",
+      "title": "Drop off Amazon returns",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1083,7 +1083,7 @@
     },
     {
       "id": "t31",
-      "title": "ReviewUpworkPaidMediacandidates",
+      "title": "Review Upwork Paid Media candidates",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1099,7 +1099,7 @@
     },
     {
       "id": "t32",
-      "title": "SendscreeningmessagestotopUpworkcandidates",
+      "title": "Send screening messages to top Upwork candidates",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1115,7 +1115,7 @@
     },
     {
       "id": "t33",
-      "title": "PaidMediacontractorvideointerviews",
+      "title": "Paid Media contractor video interviews",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1131,7 +1131,7 @@
     },
     {
       "id": "t34",
-      "title": "PresentPaidMediacontractorrecommendation",
+      "title": "Present Paid Media contractor recommendation",
       "phase": "pre-start",
       "type": "decision",
       "status": "pending",
@@ -1147,7 +1147,7 @@
     },
     {
       "id": "t35",
-      "title": "MeetDevauneBohall(CultureandCareLeader)",
+      "title": "Meet Devaune Bohall (Culture and Care Leader)",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1162,7 +1162,7 @@
     },
     {
       "id": "t36",
-      "title": "MeetMistiHerring",
+      "title": "Meet Misti Herring",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1348,7 +1348,7 @@
     },
     {
       "id": "interview-01",
-      "title": "MeetGrahamBaugh(DirectorofProcessImprovement)",
+      "title": "Meet Graham Baugh (Director of Process Improvement)",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1363,7 +1363,7 @@
     },
     {
       "id": "interview-02",
-      "title": "MeetBradTaylor(ChiefDevelopmentOfficer)",
+      "title": "Meet Brad Taylor (Chief Development Officer)",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1378,7 +1378,7 @@
     },
     {
       "id": "interview-03",
-      "title": "Secretshop3-5franchiselocations",
+      "title": "Secret shop 3-5 franchise locations",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1393,7 +1393,7 @@
     },
     {
       "id": "interview-04",
-      "title": "AuditadaccountsandCRMdataquality",
+      "title": "Audit ad accounts and CRM data quality",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1408,7 +1408,7 @@
     },
     {
       "id": "interview-05",
-      "title": "Determinepaidadspartnersolution",
+      "title": "Determine paid ads partner solution",
       "phase": "phase-1",
       "type": "decision",
       "status": "pending",
@@ -1423,7 +1423,7 @@
     },
     {
       "id": "interview-06",
-      "title": "Reviewandfixorgchart",
+      "title": "Review and fix org chart",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1438,7 +1438,7 @@
     },
     {
       "id": "interview-07",
-      "title": "Lockfunneldefinitions(lead,show,close)",
+      "title": "Lock funnel definitions (lead, show, close)",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1453,7 +1453,7 @@
     },
     {
       "id": "onb-01",
-      "title": "VirtualmeetingwithCEODanielStein",
+      "title": "Virtual meeting with CEO Daniel Stein",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1466,7 +1466,7 @@
     },
     {
       "id": "onb-02",
-      "title": "Completeallonlinenewhiretraining",
+      "title": "Complete all online new hire training",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1479,7 +1479,7 @@
     },
     {
       "id": "onb-03",
-      "title": "Reviewaccountabilitychartandseatownership",
+      "title": "Review accountability chart and seat ownership",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1492,7 +1492,7 @@
     },
     {
       "id": "onb-04",
-      "title": "Memorizecorevalues,mission,vision,NorthStar",
+      "title": "Memorize core values, mission, vision, North Star",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1505,7 +1505,7 @@
     },
     {
       "id": "onb-05",
-      "title": "MeetingwithOvMahboob-reviewhandoverdocument",
+      "title": "Meeting with Ov Mahboob - review handover document",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1518,7 +1518,7 @@
     },
     {
       "id": "onb-06",
-      "title": "Googleemailandcalendarsetup(NaoviFlores)",
+      "title": "Google email and calendar setup (Naovi Flores)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1531,7 +1531,7 @@
     },
     {
       "id": "onb-07",
-      "title": "StrongGrowthPlatformsetup&training(Judah)",
+      "title": "Strong Growth Platform setup & training (Judah)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1544,7 +1544,7 @@
     },
     {
       "id": "onb-08",
-      "title": "FathomAINotetakersetup(Naovi)",
+      "title": "Fathom AI Notetaker setup (Naovi)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1557,7 +1557,7 @@
     },
     {
       "id": "onb-09",
-      "title": "Dropboxfilestructureandpermissions(Naovi)",
+      "title": "Dropbox file structure and permissions (Naovi)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1570,7 +1570,7 @@
     },
     {
       "id": "onb-10",
-      "title": "ActiveCampaigntraining(CRM,email,SMS,automations)",
+      "title": "ActiveCampaign training (CRM, email, SMS, automations)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1583,7 +1583,7 @@
     },
     {
       "id": "onb-11",
-      "title": "Glofoxtraining(athletescheduling,waivers,trials)",
+      "title": "Glofox training (athlete scheduling, waivers, trials)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1596,7 +1596,7 @@
     },
     {
       "id": "onb-12",
-      "title": "JustCalltraining(callingandSMSworkflows)",
+      "title": "JustCall training (calling and SMS workflows)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1609,7 +1609,7 @@
     },
     {
       "id": "onb-13",
-      "title": "GA4accessandcampaigntrackingoverview(Naovi)",
+      "title": "GA4 access and campaign tracking overview (Naovi)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1622,7 +1622,7 @@
     },
     {
       "id": "onb-14",
-      "title": "Zapierintegrationsandautomationlogicreview(Naovi)",
+      "title": "Zapier integrations and automation logic review (Naovi)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1635,7 +1635,7 @@
     },
     {
       "id": "onb-15",
-      "title": "Socialmediaandadplatformaccessverified(Naovi)",
+      "title": "Social media and ad platform access verified (Naovi)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1648,7 +1648,7 @@
     },
     {
       "id": "onb-16",
-      "title": "PlanningsessionwithGrahamBaugh-athletesales",
+      "title": "Planning session with Graham Baugh - athlete sales",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1661,7 +1661,7 @@
     },
     {
       "id": "onb-17",
-      "title": "PlanningsessionwithJudahStoltzfus-attribution/tracking",
+      "title": "Planning session with Judah Stoltzfus - attribution/tracking",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1674,7 +1674,7 @@
     },
     {
       "id": "onb-18",
-      "title": "Paidadscampaignreviewwithfractionaladsteam",
+      "title": "Paid ads campaign review with fractional ads team",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1687,7 +1687,7 @@
     },
     {
       "id": "onb-19",
-      "title": "Updateandfinalize90-dayplan",
+      "title": "Update and finalize 90-day plan",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1704,7 +1704,7 @@
     },
     {
       "id": "onb-20",
-      "title": ",000signingbonus-completiongate",
+      "title": "$5,000 signing bonus - completion gate",
       "phase": "pre-start",
       "type": "milestone",
       "status": "pending",
@@ -1724,7 +1724,7 @@
     },
     {
       "id": "today-01",
-      "title": "Sendfollow-upemailtoDwayne(sequencingrecommendation)",
+      "title": "Send follow-up email to Dwayne (sequencing recommendation)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1737,7 +1737,7 @@
     },
     {
       "id": "today-02",
-      "title": "Requestcorevalues/mission/visiondocfromDaniel",
+      "title": "Request core values/mission/vision doc from Daniel",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1750,7 +1750,7 @@
     },
     {
       "id": "today-03",
-      "title": "GetclarificationonMichaelrole/status",
+      "title": "Get clarification on Michael role/status",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1763,7 +1763,7 @@
     },
     {
       "id": "today-04",
-      "title": "RequestSOPs/playbooksfromOv",
+      "title": "Request SOPs/playbooks from Ov",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1778,7 +1778,7 @@
     },
     {
       "id": "today-05",
-      "title": "ConfirmNaovibandwidthfortrainingschedule",
+      "title": "Confirm Naovi bandwidth for training schedule",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1791,7 +1791,7 @@
     },
     {
       "id": "pre-secret-shop",
-      "title": "Secretshop2-3franchiselocations(pre-startbaseline)",
+      "title": "Secret shop 2-3 franchise locations (pre-start baseline)",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1804,7 +1804,7 @@
     },
     {
       "id": "direct-reports-1on1",
-      "title": "Setup1:1cadencewithdirectreports",
+      "title": "Setup 1:1 cadence with direct reports",
       "phase": "phase-1",
       "type": "task",
       "status": "pending",
@@ -1819,7 +1819,7 @@
     },
     {
       "id": "t37",
-      "title": "FollowupGrahamdocuments",
+      "title": "Follow up Graham documents",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1832,7 +1832,7 @@
     },
     {
       "id": "t38",
-      "title": "Leadformimprovementsdraft",
+      "title": "Lead form improvements draft",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1845,7 +1845,7 @@
     },
     {
       "id": "t39",
-      "title": "BrandStandardsreview",
+      "title": "Brand Standards review",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",
@@ -1858,7 +1858,7 @@
     },
     {
       "id": "t40",
-      "title": "MarketingPlaybookreviewandedit",
+      "title": "Marketing Playbook review and edit",
       "phase": "pre-start",
       "type": "task",
       "status": "pending",

@@ -1314,7 +1314,7 @@
       "type": "task",
       "status": "pending",
       "owner": "Alex",
-      "dueDate": "2026-02-10",
+      "dueDate": "2026-02-06",
       "dependencies": [],
       "category": "special-strong",
       "subcategory": "onboarding",

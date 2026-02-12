@@ -4,7 +4,7 @@
     "role": "VP of Sales & Marketing",
     "startDate": "2026-02-23",
     "endDate": "2026-05-24",
-    "lastUpdated": "2026-02-06T14:26:00-06:00"
+    "lastUpdated": "2026-02-12T09:58:00-06:00"
   },
   "categories": [
     {
@@ -2018,6 +2018,19 @@
       "category": "special-strong",
       "subcategory": "systems",
       "notes": "Close 50% attribution gap via Meta Conversions API or offline conversion uploads. Enables Meta optimization for booked appointments, not just form fills."
+    },
+    {
+      "id": "t51",
+      "title": "Email Daniel - Check on Trinity (wife hit her head)",
+      "phase": "pre-start",
+      "type": "task",
+      "status": "pending",
+      "owner": "Alex",
+      "dueDate": "2026-02-12",
+      "dependencies": [],
+      "category": "special-strong",
+      "subcategory": "leadership",
+      "notes": "Trinity (Daniel's wife) slipped and hit her head. Send brief, warm check-in email."
     }
   ],
   "contacts": [

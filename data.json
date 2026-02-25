@@ -4,7 +4,7 @@
                  "role":  "VP of Sales \u0026 Marketing",
                  "startDate":  "2026-02-23",
                  "endDate":  "2026-05-24",
-                 "lastUpdated":  "2026-02-25T11:15:13.437Z",
+                 "lastUpdated":  "2026-02-25T12:22:36.202Z",
                  "version":  "2.1",
                  "description":  "DAMB Daily Planner \u0026 Tracker",
                  "priorities":  [
@@ -171,7 +171,7 @@
                       "title":  "Call Window World - Order 2 replacement windows",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-02",
                       "dependencies":  [
@@ -193,16 +193,19 @@
                       "scheduledDate":  "2026-02-02",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Replacement scheduled",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t2",
                       "title":  "Dallas Relocation - Household",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "in-progress",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-09",
                       "dependencies":  [
@@ -214,16 +217,19 @@
                       "scheduledDate":  "2026-02-09",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Moved to Dallas",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t3",
                       "title":  "Dallas Relocation - Melanie",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Melanie",
                       "dueDate":  "2026-02-14",
                       "dependencies":  [
@@ -235,9 +241,12 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Melanie relocated",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t4",
@@ -266,7 +275,7 @@
                       "title":  "Graham onboarding sessions",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "in-progress",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-22",
                       "dependencies":  [
@@ -279,9 +288,12 @@
                       "scheduledDate":  "2026-02-22",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Completed onboarding sessions",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t6",
@@ -310,7 +322,7 @@
                       "title":  "Request full 2026 Marketing Budget/P\u0026L",
                       "phase":  "pre-start",
                       "type":  "decision",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dependencies":  [
 
@@ -322,16 +334,19 @@
                       "scheduledDate":  null,
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Budget received",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t8",
                       "title":  "Get added to Zoom corporate account",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dependencies":  [
 
@@ -343,16 +358,19 @@
                       "scheduledDate":  null,
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Zoom access granted",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t9",
                       "title":  "OFFICIAL START DATE",
                       "phase":  "phase-1",
                       "type":  "milestone",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-23",
                       "dependencies":  [
@@ -366,9 +384,12 @@
                       "scheduledDate":  "2026-02-23",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Started Feb 23, 2026",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t10",
@@ -1482,7 +1503,7 @@
                       "title":  "Complete Kansas unemployment form",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-02",
                       "dependencies":  [
@@ -1494,16 +1515,19 @@
                       "scheduledDate":  "2026-02-02",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Completed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "unemployment-0209",
                       "title":  "Complete Kansas unemployment form",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-09",
                       "dependencies":  [
@@ -1515,16 +1539,19 @@
                       "scheduledDate":  "2026-02-09",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Completed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t29",
                       "title":  "Call Eli at You Move Me - confirm truck ready Feb 9",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-02",
                       "dependencies":  [
@@ -1536,9 +1563,12 @@
                       "scheduledDate":  "2026-02-02",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Move complete",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t30",
@@ -1566,7 +1596,7 @@
                       "title":  "Review Upwork Paid Media candidates",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-05",
                       "priority":  "high",
@@ -1579,16 +1609,19 @@
                       "scheduledDate":  "2026-02-05",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Candidates reviewed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t32",
                       "title":  "Send screening messages to top Upwork candidates",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-06",
                       "priority":  "high",
@@ -1601,16 +1634,19 @@
                       "scheduledDate":  "2026-02-06",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Screening complete",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t33",
                       "title":  "Paid Media contractor video interviews",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-14",
                       "priority":  "high",
@@ -1623,16 +1659,19 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Interviews complete",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t34",
                       "title":  "Present Paid Media contractor recommendation",
                       "phase":  "pre-start",
                       "type":  "decision",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-14",
                       "priority":  "high",
@@ -1645,9 +1684,12 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Jared selected",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t35",
@@ -2138,7 +2180,7 @@
                       "title":  "Lock funnel definitions (lead, show, close)",
                       "phase":  "phase-1",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-24",
                       "dependencies":  [
@@ -2151,16 +2193,19 @@
                       "scheduledDate":  "2026-02-24",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Definitions locked",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-01",
                       "title":  "Virtual meeting with CEO Daniel Stein",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-14",
                       "dependencies":  [
@@ -2173,16 +2218,19 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Met with Daniel",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-02",
                       "title":  "Complete all online new hire training",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-21",
                       "dependencies":  [
@@ -2195,16 +2243,19 @@
                       "scheduledDate":  "2026-02-21",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Training completed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-03",
                       "title":  "Review accountability chart and seat ownership",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-21",
                       "dependencies":  [
@@ -2217,16 +2268,19 @@
                       "scheduledDate":  "2026-02-21",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Reviewed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-04",
                       "title":  "Memorize core values, mission, vision, North Star",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-21",
                       "dependencies":  [
@@ -2239,16 +2293,19 @@
                       "scheduledDate":  "2026-02-21",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Memorized",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-05",
                       "title":  "Meeting with Ov Mahboob - review handover document",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-10",
                       "dependencies":  [
@@ -2261,16 +2318,19 @@
                       "scheduledDate":  "2026-02-10",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Handover review done",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-06",
                       "title":  "Google email and calendar setup (Naovi Flores)",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Naovi",
                       "dueDate":  "2026-02-14",
                       "dependencies":  [
@@ -2283,16 +2343,19 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Email/calendar set up",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-07",
                       "title":  "Strong Growth Platform setup \u0026 training (Judah)",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Judah",
                       "dueDate":  "2026-02-14",
                       "dependencies":  [
@@ -2305,16 +2368,19 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Has SGP access",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-08",
                       "title":  "Fathom AI Notetaker setup (Naovi)",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Naovi",
                       "dueDate":  "2026-02-14",
                       "dependencies":  [
@@ -2327,16 +2393,19 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Fathom set up",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-09",
                       "title":  "Dropbox file structure and permissions (Naovi)",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Naovi",
                       "dueDate":  "2026-02-14",
                       "dependencies":  [
@@ -2349,9 +2418,12 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Dropbox access confirmed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-10",
@@ -2371,7 +2443,10 @@
                       "scheduledDate":  "2026-02-18",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Training not yet received",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
                       "completedDate":  null
                   },
@@ -2393,7 +2468,10 @@
                       "scheduledDate":  "2026-02-18",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Training not yet received",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
                       "completedDate":  null
                   },
@@ -2415,7 +2493,10 @@
                       "scheduledDate":  "2026-02-18",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Training not yet received",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
                       "completedDate":  null
                   },
@@ -2437,16 +2518,27 @@
                       "scheduledDate":  "2026-02-18",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "GA4 access confirmed",
+                                              "date":  "2026-02-25"
+                                          },
+                                          {
+                                              "action":  "GA4 code exists (G-Y2BYLSY3K0) but Alex needs property access. Request from Naovi/Daniel.",
+                                              "date":  "2026-02-25"
+                                          },
+                                          {
+                                              "action":  "Requested access from Naovi 2/25",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-14",
                       "title":  "Zapier integrations and automation logic review (Naovi)",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-18",
                       "dependencies":  [
@@ -2459,16 +2551,19 @@
                       "scheduledDate":  "2026-02-18",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Received Zapier credentials from Naovi 2/25",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-15",
                       "title":  "Social media and ad platform access verified (Naovi)",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Naovi",
                       "dueDate":  "2026-02-18",
                       "dependencies":  [
@@ -2481,16 +2576,19 @@
                       "scheduledDate":  "2026-02-18",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Facebook and Google Ads access confirmed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-16",
                       "title":  "Planning session with Graham Baugh - athlete sales",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-20",
                       "dependencies":  [
@@ -2503,16 +2601,19 @@
                       "scheduledDate":  "2026-02-20",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Completed with Graham",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-17",
                       "title":  "Planning session with Judah Stoltzfus - attribution/tracking",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-20",
                       "dependencies":  [
@@ -2525,16 +2626,19 @@
                       "scheduledDate":  "2026-02-20",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Completed with Judah",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-18",
                       "title":  "Paid ads campaign review with fractional ads team",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-20",
                       "dependencies":  [
@@ -2547,16 +2651,19 @@
                       "scheduledDate":  "2026-02-20",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Review complete",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-19",
                       "title":  "Update and finalize 90-day plan",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-21",
                       "dependencies":  [
@@ -2571,9 +2678,12 @@
                       "scheduledDate":  "2026-02-21",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "90-day plan updated",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "onb-20",
@@ -2598,7 +2708,10 @@
                       "scheduledDate":  "2026-02-23",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Not received yet as of 2/25. Follow up needed.",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
                       "completedDate":  null
                   },
@@ -2607,7 +2720,7 @@
                       "title":  "Send follow-up email to Dwayne (sequencing recommendation)",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-02",
                       "dependencies":  [
@@ -2620,16 +2733,19 @@
                       "scheduledDate":  "2026-02-02",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Sent",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "today-02",
                       "title":  "Request core values/mission/vision doc from Daniel",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-05",
                       "dependencies":  [
@@ -2642,16 +2758,19 @@
                       "scheduledDate":  "2026-02-05",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Received",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "today-03",
                       "title":  "Get clarification on Michael role/status",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-05",
                       "dependencies":  [
@@ -2664,16 +2783,19 @@
                       "scheduledDate":  "2026-02-05",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Clarified",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "today-04",
                       "title":  "Request SOPs/playbooks from Ov",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-10",
                       "dependencies":  [
@@ -2686,16 +2808,19 @@
                       "scheduledDate":  "2026-02-10",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "SOPs and playbooks received",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "today-05",
                       "title":  "Confirm Naovi bandwidth for training schedule",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-05",
                       "dependencies":  [
@@ -2708,9 +2833,12 @@
                       "scheduledDate":  "2026-02-05",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Confirmed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "pre-secret-shop",
@@ -2783,7 +2911,7 @@
                       "title":  "Lead form improvements draft",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-14",
                       "dependencies":  [
@@ -2796,16 +2924,19 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Draft complete",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t39",
                       "title":  "Brand Standards review",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-14",
                       "dependencies":  [
@@ -2818,16 +2949,19 @@
                       "scheduledDate":  "2026-02-14",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Reviewed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t40",
                       "title":  "Marketing Playbook review and edit",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-18",
                       "dependencies":  [
@@ -2840,16 +2974,19 @@
                       "scheduledDate":  "2026-02-18",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Reviewed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t41",
                       "title":  "Get Meta ad account access from Naovi",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-06",
                       "priority":  "high",
@@ -2862,16 +2999,19 @@
                       "scheduledDate":  "2026-02-06",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Meta access confirmed",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t42",
                       "title":  "Ov knowledge transfer session",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-10",
                       "priority":  "high",
@@ -2884,16 +3024,19 @@
                       "scheduledDate":  "2026-02-10",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Knowledge transfer done",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t43",
                       "title":  "Decision: Jared vs Terry for Paid Media hire",
                       "phase":  "pre-start",
                       "type":  "decision",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-07",
                       "priority":  "high",
@@ -2906,9 +3049,12 @@
                       "scheduledDate":  "2026-02-07",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Jared hired",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t44",
@@ -2928,7 +3074,10 @@
                       "scheduledDate":  "2026-02-10",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Received from Graham, needs review",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
                       "completedDate":  null
                   },
@@ -3075,7 +3224,7 @@
                       "title":  "Email Daniel - Check on Trinity (wife hit her head)",
                       "phase":  "pre-start",
                       "type":  "task",
-                      "status":  "pending",
+                      "status":  "complete",
                       "owner":  "Alex",
                       "dueDate":  "2026-02-12",
                       "dependencies":  [
@@ -3088,9 +3237,12 @@
                       "scheduledDate":  "2026-02-12",
                       "timeEstimate":  null,
                       "activityLog":  [
-
+                                          {
+                                              "action":  "Sent",
+                                              "date":  "2026-02-25"
+                                          }
                                       ],
-                      "completedDate":  null
+                      "completedDate":  "2026-02-25"
                   },
                   {
                       "id":  "t30",

@@ -76,16 +76,20 @@
 <h4>Structure Overview:</h4>
 <pre>
 specialstrong.com/
-├── /locations/                              [DIRECTORY HUB]
-│   ├── /locations/texas/                    [STATE PILLAR PAGE]
-│   │   ├── /locations/texas/mckinney/       [CITY CLUSTER - Tier 1]
-│   │   ├── /locations/texas/irving/         [CITY CLUSTER - Tier 1]
-│   │   └── /locations/texas/fort-worth/     [CITY CLUSTER - Tier 1]
-│   ├── /locations/california/               [STATE PILLAR PAGE]
-│   │   ├── /locations/california/folsom/
-│   │   └── /locations/california/san-diego/
-│   └── /locations/arizona/                  [STATE PILLAR PAGE]
-│       └── /locations/arizona/mesa/
+│
+├── /locations/                              [DIRECTORY HUB - links to all locations]
+│
+├── /texas/                                  [STATE PILLAR PAGE - root level]
+│   ├── /texas/mckinney/                     [CITY CLUSTER - Tier 1]
+│   ├── /texas/irving/                       [CITY CLUSTER - Tier 1]
+│   └── /texas/fort-worth/                   [CITY CLUSTER - Tier 1]
+│
+├── /california/                             [STATE PILLAR PAGE - root level]
+│   ├── /california/folsom/
+│   └── /california/san-diego/
+│
+├── /arizona/                                [STATE PILLAR PAGE - root level]
+│   └── /arizona/mesa/
 │
 ├── /services/                               [SERVICES HUB]
 │   ├── /services/adaptive-personal-training/
@@ -96,23 +100,26 @@ specialstrong.com/
     └── /blog/[article-slug]/
 </pre>
 
+<p><strong>Note:</strong> The <code>/locations/</code> page serves as a directory hub (visual sitemap for users to find locations) but is NOT a parent in the URL path. State pages live at root level for shorter, cleaner URLs.</p>
+
 <h3>URL Transition Examples</h3>
 <table>
     <tr><th>Current URL</th><th>New URL</th><th>Page Type</th></tr>
-    <tr><td>/adaptive-special-needs-fitness-training-in-irving-tx/</td><td>/locations/texas/irving/</td><td>City Landing Page</td></tr>
-    <tr><td>/adaptive-special-needs-fitness-training-in-mckinney-tx/</td><td>/locations/texas/mckinney/</td><td>City Landing Page</td></tr>
+    <tr><td>/adaptive-special-needs-fitness-training-in-irving-tx/</td><td>/texas/irving/</td><td>City Landing Page</td></tr>
+    <tr><td>/adaptive-special-needs-fitness-training-in-mckinney-tx/</td><td>/texas/mckinney/</td><td>City Landing Page</td></tr>
     <tr><td>/who-is-daniel-stein-special-strong-fitness-trainer/</td><td>/blog/who-is-daniel-stein/</td><td>Blog Post</td></tr>
     <tr><td>N/A (new)</td><td>/services/group-fitness/</td><td>Service Page</td></tr>
-    <tr><td>N/A (new)</td><td>/locations/texas/</td><td>State Pillar Page</td></tr>
+    <tr><td>N/A (new)</td><td>/texas/</td><td>State Pillar Page</td></tr>
+    <tr><td>N/A (new)</td><td>/locations/</td><td>Directory Hub</td></tr>
 </table>
 
 <h3>Local Domain Redirect Strategy</h3>
 <p>All local franchise domains redirect to their corresponding master landing page:</p>
 <table>
     <tr><th>Local Domain</th><th>Redirects To</th></tr>
-    <tr><td>specialstrongmckinney.com</td><td>specialstrong.com/locations/texas/mckinney/</td></tr>
-    <tr><td>specialstrongirving.com</td><td>specialstrong.com/locations/texas/irving/</td></tr>
-    <tr><td>specialstrongfolsom.com</td><td>specialstrong.com/locations/california/folsom/</td></tr>
+    <tr><td>specialstrongmckinney.com</td><td>specialstrong.com/texas/mckinney/</td></tr>
+    <tr><td>specialstrongirving.com</td><td>specialstrong.com/texas/irving/</td></tr>
+    <tr><td>specialstrongfolsom.com</td><td>specialstrong.com/california/folsom/</td></tr>
 </table>
 
 <p><strong>Redirect Requirements:</strong></p>
@@ -156,7 +163,7 @@ specialstrong.com/
 
 <h3>MASTER LANDING PAGE SPECIFICATIONS</h3>
 <p><strong>Purpose:</strong> Primary SEO and conversion page for each franchise territory. Must be the strongest page in the territory.</p>
-<p><strong>URL Format:</strong> /locations/[state]/[city]/</p>
+<p><strong>URL Format:</strong> /[state]/[city]/</p>
 
 <h4>Required Sections:</h4>
 <ol>
@@ -233,7 +240,7 @@ specialstrong.com/
 
 <h3>STATE PILLAR PAGE SPECIFICATIONS</h3>
 <p><strong>Purpose:</strong> Geographic authority hub linking to all city pages within the state.</p>
-<p><strong>URL Format:</strong> /locations/[state]/</p>
+<p><strong>URL Format:</strong> /[state]/</p>
 
 <h4>Required Sections:</h4>
 <ol>
@@ -246,7 +253,7 @@ specialstrong.com/
 
 <h3>CITY CLUSTER PAGE SPECIFICATIONS</h3>
 <p><strong>Purpose:</strong> Support the master landing page by capturing nearby demand. Only for Tier 1 cities.</p>
-<p><strong>URL Format:</strong> /locations/[state]/[city]/</p>
+<p><strong>URL Format:</strong> /[state]/[city]/</p>
 
 <p><strong>Key Difference from Master Landing Page:</strong></p>
 <ul>
@@ -570,8 +577,9 @@ sitemap-index.xml
 <table>
     <tr><th>Item</th><th>Owner</th><th>Status</th></tr>
     <tr><td>URL mapping spreadsheet complete</td><td>Joshua</td><td>☐</td></tr>
-    <tr><td>State pillar pages live</td><td>Dev Team</td><td>☐</td></tr>
-    <tr><td>Master landing pages live</td><td>Dev Team</td><td>☐</td></tr>
+    <tr><td>Locations directory page live (/locations/)</td><td>Dev Team</td><td>☐</td></tr>
+    <tr><td>State pillar pages live (/[state]/)</td><td>Dev Team</td><td>☐</td></tr>
+    <tr><td>Master landing pages live (/[state]/[city]/)</td><td>Dev Team</td><td>☐</td></tr>
     <tr><td>City cluster pages live (Tier 1 only)</td><td>Dev Team</td><td>☐</td></tr>
     <tr><td>Schema markup implemented</td><td>Dev Team</td><td>☐</td></tr>
     <tr><td>301 redirects tested</td><td>Joshua</td><td>☐</td></tr>
